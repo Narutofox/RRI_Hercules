@@ -1,0 +1,1869 @@
+fileFormatVersion: 2
+guid: 85687909ed60ff84691502663a9cb77a
+timeCreated: 1495965620
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Hercules_0
+    21300002: Hercules_1
+    21300004: Hercules_2
+    21300006: Hercules_3
+    21300008: Hercules_4
+    21300010: Hercules_5
+    21300012: Hercules_6
+    21300014: Hercules_7
+    21300016: Hercules_8
+    21300018: Hercules_9
+    21300020: Hercules_10
+    21300022: Hercules_11
+    21300024: Hercules_12
+    21300026: Hercules_13
+    21300028: Hercules_14
+    21300030: Hercules_15
+    21300032: Hercules_16
+    21300034: Hercules_17
+    21300036: Hercules_18
+    21300038: Hercules_19
+    21300040: Hercules_20
+    21300042: Hercules_21
+    21300044: Hercules_22
+    21300046: Hercules_23
+    21300048: Hercules_24
+    21300050: Hercules_25
+    21300052: Hercules_26
+    21300054: Hercules_27
+    21300056: Hercules_28
+    21300058: Hercules_29
+    21300060: Hercules_30
+    21300062: Hercules_31
+    21300064: Hercules_32
+    21300066: Hercules_33
+    21300068: Hercules_34
+    21300070: Hercules_35
+    21300072: Hercules_36
+    21300074: Hercules_37
+    21300076: Hercules_38
+    21300078: Hercules_39
+    21300080: Hercules_40
+    21300082: Hercules_41
+    21300084: Hercules_42
+    21300086: Hercules_43
+    21300088: Hercules_44
+    21300090: Hercules_45
+    21300092: Hercules_46
+    21300094: Hercules_47
+    21300096: Hercules_48
+    21300098: Hercules_49
+    21300100: Hercules_50
+    21300102: Hercules_51
+    21300104: Hercules_52
+    21300106: Hercules_53
+    21300108: Hercules_54
+    21300110: Hercules_55
+    21300112: Hercules_56
+    21300114: Hercules_57
+    21300116: Hercules_58
+    21300118: Hercules_59
+    21300120: Hercules_60
+    21300122: Hercules_61
+    21300124: Hercules_62
+    21300126: Hercules_63
+    21300128: Hercules_64
+    21300130: Hercules_65
+    21300132: Hercules_66
+    21300134: Hercules_67
+    21300136: Hercules_68
+    21300138: Hercules_69
+    21300140: Hercules_70
+    21300142: Hercules_71
+    21300144: Hercules_72
+    21300146: Hercules_73
+    21300148: Hercules_74
+    21300150: Hercules_75
+    21300152: Hercules_76
+    21300154: Hercules_77
+    21300156: Hercules_78
+    21300158: Hercules_79
+    21300160: Hercules_80
+    21300162: Hercules_81
+    21300164: Hercules_82
+    21300166: Hercules_83
+    21300168: Hercules_84
+    21300170: Hercules_85
+    21300172: Hercules_86
+    21300174: Hercules_87
+    21300176: Hercules_88
+    21300178: Hercules_89
+    21300180: Hercules_90
+    21300182: Hercules_91
+    21300184: Hercules_92
+    21300186: Hercules_93
+    21300188: Hercules_94
+    21300190: Hercules_95
+    21300192: Hercules_96
+    21300194: Hercules_97
+    21300196: Hercules_98
+    21300198: Hercules_99
+    21300200: Hercules_100
+    21300202: Hercules_101
+    21300204: Hercules_102
+    21300206: Hercules_103
+    21300208: Hercules_104
+    21300210: Hercules_105
+    21300212: Hercules_106
+    21300214: Hercules_107
+    21300216: Hercules_108
+    21300218: Hercules_109
+    21300220: Hercules_110
+    21300222: Hercules_111
+    21300224: Hercules_112
+    21300226: Hercules_113
+    21300228: Hercules_114
+    21300230: Hercules_115
+    21300232: Hercules_116
+    21300234: Hercules_117
+    21300236: Hercules_118
+    21300238: Hercules_119
+    21300240: Hercules_120
+    21300242: Hercules_121
+    21300244: Hercules_122
+    21300246: Hercules_123
+    21300248: Hercules_124
+    21300250: Hercules_125
+    21300252: Hercules_126
+    21300254: Hercules_127
+    21300256: Hercules_128
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hercules_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1161
+        width: 41
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_1
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1162
+        width: 38
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_2
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 1159
+        width: 40
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_3
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 1161
+        width: 44
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_4
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1160
+        width: 61
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_5
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1161
+        width: 42
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1094
+        width: 40
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_7
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1096
+        width: 46
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_8
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 1092
+        width: 55
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_9
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1089
+        width: 48
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_10
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 1093
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_11
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 1094
+        width: 41
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_12
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1096
+        width: 50
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_13
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 1096
+        width: 52
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_14
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 1096
+        width: 47
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 994
+        width: 28
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_16
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 987
+        width: 35
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_17
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 995
+        width: 31
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_18
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 993
+        width: 47
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_19
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1062
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_20
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 996
+        width: 46
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_21
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 995
+        width: 61
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_22
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 993
+        width: 43
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_23
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 1054
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 993
+        width: 49
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_25
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 997
+        width: 44
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_26
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 1033
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_27
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 988
+        width: 45
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_28
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 993
+        width: 38
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_29
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 1035
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_30
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 996
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_31
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 921
+        width: 42
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_32
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 921
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_33
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 921
+        width: 46
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_34
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 919
+        width: 51
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_35
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 921
+        width: 41
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_36
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 921
+        width: 35
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_37
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 916
+        width: 48
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_38
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 920
+        width: 40
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_39
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 923
+        width: 39
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_40
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 922
+        width: 45
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 840
+        width: 67
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_42
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 833
+        width: 60
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_43
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 837
+        width: 41
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_44
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 841
+        width: 61
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_45
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 839
+        width: 48
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_46
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 833
+        width: 38
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_47
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 837
+        width: 41
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_48
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 840
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_49
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 832
+        width: 57
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 753
+        width: 41
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_51
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 753
+        width: 39
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_52
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 753
+        width: 36
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_53
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 755
+        width: 39
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_54
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 754
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_55
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 753
+        width: 50
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_56
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 753
+        width: 51
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_57
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 753
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_58
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 811
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_59
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 753
+        width: 56
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_60
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 753
+        width: 38
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_61
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 753
+        width: 41
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_62
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 754
+        width: 39
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_63
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 673
+        width: 42
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 673
+        width: 46
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_65
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 673
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_66
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 673
+        width: 59
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_67
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 673
+        width: 46
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_68
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 673
+        width: 46
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_69
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 673
+        width: 39
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_70
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 673
+        width: 60
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_71
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 673
+        width: 60
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_72
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 584
+        width: 36
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_73
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 584
+        width: 76
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_74
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 581
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_75
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 583
+        width: 39
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_76
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 578
+        width: 37
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_77
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 585
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_78
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 583
+        width: 46
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_79
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 583
+        width: 63
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_80
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 586
+        width: 69
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_81
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 325
+        width: 362
+        height: 237
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_82
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 502
+        width: 47
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_83
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 501
+        width: 49
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_84
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 497
+        width: 45
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_85
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 499
+        width: 48
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_86
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 500
+        width: 41
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_87
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 329
+        width: 34
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_88
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 325
+        width: 39
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_89
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 327
+        width: 51
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_90
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 324
+        width: 51
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_91
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 228
+        width: 47
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_92
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 225
+        width: 37
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_93
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 232
+        width: 33
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_94
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 232
+        width: 35
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_95
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 299
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_96
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 231
+        width: 50
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_97
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 227
+        width: 49
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_98
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 225
+        width: 36
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_99
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 224
+        width: 41
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_100
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 230
+        width: 58
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_101
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 225
+        width: 52
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_102
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 230
+        width: 45
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_103
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 226
+        width: 43
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_104
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 153
+        width: 40
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_105
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 153
+        width: 44
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_106
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 153
+        width: 35
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_107
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 153
+        width: 36
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_108
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 153
+        width: 33
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_109
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 153
+        width: 39
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_110
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 154
+        width: 41
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_111
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 153
+        width: 49
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_112
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 164
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_113
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 154
+        width: 32
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_114
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 151
+        width: 32
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_115
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 154
+        width: 46
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_116
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 153
+        width: 48
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_117
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 154
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_118
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 73
+        width: 66
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_119
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 74
+        width: 62
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_120
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 74
+        width: 70
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_121
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 73
+        width: 56
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_122
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 74
+        width: 61
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_123
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 73
+        width: 57
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_124
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 73
+        width: 45
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_125
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_126
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 6
+        width: 57
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hercules_127
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 5
+        width: 59
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
