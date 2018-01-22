@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
+    private float CONST_DEFAULT_GRAVITY;
+
     public float maxSpeed = 100f;
     public bool facingRight = true;
     private Rigidbody2D RB2D;
@@ -12,6 +14,7 @@ public class Player : MonoBehaviour {
     public bool isGrounded = false;
     public float jumpForce;
     private PlayerAttack PlayerAttackScript;
+    private float jumpTimestamp = -1f;
    
     // Use this for initialization
     void Start() {
@@ -25,7 +28,9 @@ public class Player : MonoBehaviour {
         {
             PlayerAttackScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAttack>();
         }
-        
+
+        CONST_DEFAULT_GRAVITY = RB2D.gravityScale;
+
         //jump = new Vector2(0.0f, 2.0f);              
     }
 
@@ -36,12 +41,14 @@ public class Player : MonoBehaviour {
         if (isGrounded)
         {
             Anim.SetBool("inAir", false);
-
+            RB2D.gravityScale = CONST_DEFAULT_GRAVITY;
         }
         else
         {
             Anim.SetBool("inAir", true);
+            RB2D.gravityScale += Time.deltaTime * 2;
         }
+
 
        
 
@@ -65,22 +72,34 @@ public class Player : MonoBehaviour {
         {
             isGrounded = false;
             Anim.SetTrigger("Jump");
-            RB2D.AddForce(new Vector2(0, jumpForce));
+            jumpTimestamp = Time.time;
+        }
+
+        if (jumpTimestamp != -1)
+        {
+            if (Time.time - jumpTimestamp < 1)
+            {
+                Vector3 newPosition = transform.position;
+                newPosition.y += Time.deltaTime * jumpForce;
+                transform.position = newPosition;
+            }
+            else jumpTimestamp = -1;
         }
     }
 
 
     private void Duck(bool duck)
     {
+        //Mozda maknuti duck funkcionalnost, znam da je ima u pravoj igri, ali previse posla za tako malu stvar, rade se fokusiraj na enemije
         if (duck)
         {
-            Anim.SetBool("Duck", true);            
-            RB2D.gravityScale = 12;
+            Anim.SetBool("Duck", true);
+            RB2D.gravityScale = CONST_DEFAULT_GRAVITY * 2;
         }
         else
         {
-            Anim.SetBool("Duck", false);           
-            RB2D.gravityScale = 5;
+            Anim.SetBool("Duck", false);
+            RB2D.gravityScale = CONST_DEFAULT_GRAVITY;
         }
     }
 
