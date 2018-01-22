@@ -65,12 +65,17 @@ public class Enemy : MonoBehaviour, IEnemy,IEnemyAttack{
 
     private void RaycastCheckUpdate()
     {
-        
-        if (!facingRight)
+        if (facingRight && direction.x < 0)
         {
             direction *= -1;
             Move *= -1;
         }
+        else if (facingRight == false && direction.x > 0)
+        {
+            direction *= -1;
+            Move *= -1;
+        }
+
         RaycastHit2D Hit = CheckRaycast(direction);
         if (Hit.collider != null && Hit.collider.gameObject.tag == "Player" && CanAttack)
         {
@@ -78,7 +83,12 @@ public class Enemy : MonoBehaviour, IEnemy,IEnemyAttack{
         }
         else if (Hit.collider != null && Hit.collider.gameObject.tag == this.tag)
         {
+            //Ovdje može nastati problem ako GameObject na koem je ova skripta nema tag
             RaycastOffset += 0.5f;
+        }
+        else if (Type == EnemyType.ShortRange)
+        {
+            Anim.SetBool("Charge", false);
         }
     }
 

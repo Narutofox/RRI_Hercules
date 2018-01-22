@@ -1766,7 +1766,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4623224853326578, guid: 31197d59eeee8d44ab26823f047962f5, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.672
+      value: 0.56
       objectReference: {fileID: 0}
     - target: {fileID: 4623224853326578, guid: 31197d59eeee8d44ab26823f047962f5, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1802,6 +1802,16 @@ Prefab:
       propertyPath: FillImage
       value: 
       objectReference: {fileID: 1597920981}
+    - target: {fileID: 61216095166940224, guid: 31197d59eeee8d44ab26823f047962f5,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 61216095166940224, guid: 31197d59eeee8d44ab26823f047962f5,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.64
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31197d59eeee8d44ab26823f047962f5, type: 2}
   m_IsPrefabParent: 0

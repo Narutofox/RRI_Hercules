@@ -12,6 +12,7 @@ TagManager:
   - AverageArcher
   - StrongArcher
   - TrapArrow
+  - KnightEnemy
   layers:
   - Default
   - TransparentFX
