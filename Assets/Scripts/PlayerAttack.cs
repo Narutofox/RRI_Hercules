@@ -92,6 +92,7 @@ public class PlayerAttack : MonoBehaviour {
 
     public void StopLightningAttack()
     {
+        EndAttack();
         Anim.SetBool("SpecialAttack", false);
         if (WeapnosArray[currentWeaponIndex] == Weapons.Lightning)
         {
@@ -238,11 +239,13 @@ public class PlayerAttack : MonoBehaviour {
         {
             Lightning.GetComponent<Lightning>().NumberOfSecondsRemaining = NumberOfLightningSeconds;
             Instantiate(Lightning, new Vector3(transform.position.x + 6, transform.position.y + 0.6f), Quaternion.identity);
+            StartAttack();
         }
         else if (WeapnosArray[currentWeaponIndex] == Weapons.Lightning && PlayerScript.facingRight == false && NumberOfLightningSeconds > 0)
         {
             Lightning.GetComponent<Lightning>().NumberOfSecondsRemaining = NumberOfLightningSeconds;
             Instantiate(Lightning, new Vector3(transform.position.x - 6, transform.position.y + 0.6f), Quaternion.identity);
+            StartAttack();
         }
         else if (WeapnosArray[currentWeaponIndex] == Weapons.Fire && PlayerScript.facingRight && NumberOfFireballShuts > 0)
         {

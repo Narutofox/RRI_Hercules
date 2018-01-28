@@ -20,9 +20,18 @@ public class Lightning : MonoBehaviour {
             PlayerAttackScript.StopLightningAttack();
         }
     }
+    
     public void Die()
     {
         Destroy(gameObject);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        var Enemy = collision.gameObject.GetComponent(typeof(Enemy));
+        if (Enemy != null)
+        {
+            (Enemy as Enemy).Die();
+        }       
+    }
 }

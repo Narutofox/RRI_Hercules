@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -75,6 +76,10 @@ public class ArrowScript : MonoBehaviour,IEnemyAttack {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Die();
+        var CollisonGameObject = collision.gameObject;
+        if (CollisonGameObject.tag != Tags.SaveFairy && CollisonGameObject.GetComponent(typeof(Enemy)) == null)
+        {
+            Die();
+        }      
     }
 }

@@ -196,6 +196,7 @@ public class Enemy : MonoBehaviour, IEnemy,IEnemyAttack{
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
         var PlayerAttack = collision.gameObject.GetComponent(typeof(PlayerAttack));
         if (PlayerAttack != null && (PlayerAttack as PlayerAttack).IsAttacking())
         {

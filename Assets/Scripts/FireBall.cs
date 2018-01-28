@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -46,6 +47,15 @@ public class FireBall : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Anim.SetBool("Hit", true);
+        if (collision.gameObject.tag != Tags.SaveFairy && collision.gameObject.tag != Tags.Player)
+        {
+            var Enemy = collision.gameObject.GetComponent(typeof(Enemy));
+            if (Enemy != null)
+            {
+                (Enemy as Enemy).Die();
+            }
+            Anim.SetBool("Hit", true);
+        }
+        
     }
 }
