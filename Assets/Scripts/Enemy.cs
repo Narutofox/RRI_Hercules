@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour, IEnemy,IEnemyAttack{
     private Rigidbody2D RB2D;
     private Vector2 direction;
     private int Move = 1;
+    public GameObject Coin;
 
     public int Damage { get; set; }
 
@@ -219,6 +220,8 @@ public class Enemy : MonoBehaviour, IEnemy,IEnemyAttack{
 
     public void Destroy()
     {
+        Instantiate(Coin, new Vector3(transform.position.x - 1, transform.position.y + 0.6f), Quaternion.identity);
+        Instantiate(Coin, new Vector3(transform.position.x + 1, transform.position.y + 0.6f), Quaternion.identity);
         Destroy(this.gameObject);
     }
 }

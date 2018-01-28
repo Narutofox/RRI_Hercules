@@ -110,6 +110,7 @@ MonoBehaviour:
   maxSpeed: 1
   Arrow: {fileID: 1230906549001480, guid: e9b8996cfd04f8349a671bb93858e7aa, type: 2}
   Type: 0
+  Coin: {fileID: 1161794585189636, guid: 9838580d844ff3d48a3fb96a85e6816a, type: 2}
 --- !u!212 &212385238604558106
 SpriteRenderer:
   m_ObjectHideFlags: 1

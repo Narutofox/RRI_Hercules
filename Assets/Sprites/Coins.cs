@@ -7,6 +7,13 @@ using UnityEngine.UI;
 public class Coins : MonoBehaviour {
     public Text BodoviText;
     private int Bodovi;
+
+    private void Start()
+    {
+        BodoviText = GameObject.Find("Bodovi").GetComponent<Text>();
+    }
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == Tags.Player)
