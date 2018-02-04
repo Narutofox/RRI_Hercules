@@ -61,7 +61,11 @@ public class Enemy : MonoBehaviour, IEnemy,IEnemyAttack{
 
     private void FixedUpdate()
     {
-            RaycastCheckUpdate();               
+        if (PlayerHealthScript.IsDead)
+        {
+            return;
+        }
+        RaycastCheckUpdate();               
     }
 
     private void RaycastCheckUpdate()
