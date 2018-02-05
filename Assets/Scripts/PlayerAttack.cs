@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,7 +12,7 @@ public class PlayerAttack : MonoBehaviour {
     private Weapons[] WeapnosArray;
     private int currentWeaponIndex;
     private Player PlayerScript;
-    private int NumberOfFireballShuts = 10;
+    private int NumberOfFireballShots = 10;
     private float NumberOfLightningSeconds = 10;
     private float NumberOfInvincibleSeconds = 10;
     private float NumberOfInvincibleDamageSeconds = 5;
@@ -79,7 +80,7 @@ public class PlayerAttack : MonoBehaviour {
                 PlayerInvincible();
             }         
         }
-        // Ako ima oružJe za nepobjedivost odbrojavaj kad DOĐE DO NULE PROMJENI NA SLJDEĆE ORUŽJE
+        // Ako ima oružje za nepobjedivost odbrojavaj kad DOĐE DO NULE PROMJENI NA SLJDEĆE ORUŽJE
         if (WeapnosArray[currentWeaponIndex] == Weapons.Invincible)
         {
             NumberOfInvincibleSeconds -= Time.deltaTime;
@@ -129,7 +130,7 @@ public class PlayerAttack : MonoBehaviour {
            return;
         }
 
-        if (WeapnosArray[currentWeaponIndex] == Weapons.Fire && NumberOfFireballShuts <= 0)
+        if (WeapnosArray[currentWeaponIndex] == Weapons.Fire && NumberOfFireballShots <= 0)
         {
              NextWeapon();
              return;
@@ -175,7 +176,7 @@ public class PlayerAttack : MonoBehaviour {
             return;
         }
 
-        if (WeapnosArray[currentWeaponIndex] == Weapons.Fire && NumberOfFireballShuts <= 0)
+        if (WeapnosArray[currentWeaponIndex] == Weapons.Fire && NumberOfFireballShots <= 0)
         {
             PrevWeapon();
             return;
@@ -220,7 +221,7 @@ public class PlayerAttack : MonoBehaviour {
 
     void Attack()
     {
-        if ((WeapnosArray[currentWeaponIndex] == Weapons.Lightning && NumberOfLightningSeconds > 0) || (WeapnosArray[currentWeaponIndex] == Weapons.Fire && NumberOfFireballShuts > 0))
+        if ((WeapnosArray[currentWeaponIndex] == Weapons.Lightning && NumberOfLightningSeconds > 0) || (WeapnosArray[currentWeaponIndex] == Weapons.Fire && NumberOfFireballShots > 0))
         {
             Anim.SetBool("SpecialAttack", true);
             Anim.SetTrigger("Attack");
@@ -247,15 +248,15 @@ public class PlayerAttack : MonoBehaviour {
             Instantiate(Lightning, new Vector3(transform.position.x - 6, transform.position.y + 0.6f), Quaternion.identity);
             StartAttack();
         }
-        else if (WeapnosArray[currentWeaponIndex] == Weapons.Fire && PlayerScript.facingRight && NumberOfFireballShuts > 0)
+        else if (WeapnosArray[currentWeaponIndex] == Weapons.Fire && PlayerScript.facingRight && NumberOfFireballShots > 0)
         {
             Instantiate(Fireball, new Vector3(transform.position.x + 2, transform.position.y + 0.6f), Quaternion.identity);
-            NumberOfFireballShuts--;
+            NumberOfFireballShots--;
         }
-        else if (WeapnosArray[currentWeaponIndex] == Weapons.Fire && PlayerScript.facingRight == false && NumberOfFireballShuts > 0)
+        else if (WeapnosArray[currentWeaponIndex] == Weapons.Fire && PlayerScript.facingRight == false && NumberOfFireballShots > 0)
         {
             Instantiate(Fireball, new Vector3(transform.position.x - 2, transform.position.y + 0.6f), Quaternion.identity);
-            NumberOfFireballShuts--;
+            NumberOfFireballShots--;
         }
     }
 
@@ -293,5 +294,16 @@ public class PlayerAttack : MonoBehaviour {
     public bool IsAttacking()
     {
         return Attacking;
+    }
+
+
+    public void AddFireballShots(int amount)
+    {
+        NumberOfFireballShots += amount;
+    }
+
+    public void AddLightningSeconds(int amount)
+    {
+        NumberOfLightningSeconds += amount;
     }
 }

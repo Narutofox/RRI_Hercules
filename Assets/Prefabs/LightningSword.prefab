@@ -9,73 +9,100 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1592133863581494}
+  m_RootGameObject: {fileID: 1817175559253752}
   m_IsPrefabParent: 1
---- !u!1 &1592133863581494
+--- !u!1 &1817175559253752
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4091606288764766}
-  - component: {fileID: 212473162111761302}
-  - component: {fileID: 58743267026858452}
-  - component: {fileID: 114075250849977190}
-  m_Layer: 2
-  m_Name: HealthBarExtend
-  m_TagString: Untagged
+  - component: {fileID: 4896035459809736}
+  - component: {fileID: 212246139675278286}
+  - component: {fileID: 95640061859944336}
+  - component: {fileID: 61338419654693144}
+  - component: {fileID: 114221240712216084}
+  m_Layer: 0
+  m_Name: LightningSword
+  m_TagString: LightningSword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4091606288764766
+--- !u!4 &4896035459809736
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1592133863581494}
+  m_GameObject: {fileID: 1817175559253752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.33, y: 0.32, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalPosition: {x: 8.8, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &58743267026858452
-CircleCollider2D:
+--- !u!61 &61338419654693144
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1592133863581494}
+  m_GameObject: {fileID: 1817175559253752}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.18836558, y: 0.094184875}
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.49, y: 0.2}
+    newSize: {x: 0.49, y: 0.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 4.366536
---- !u!114 &114075250849977190
+  m_Size: {x: 0.49, y: 0.2}
+  m_EdgeRadius: 0
+--- !u!95 &95640061859944336
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1817175559253752}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5db4165a7741bd24d8c6278b039c4eaf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114221240712216084
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1592133863581494}
+  m_GameObject: {fileID: 1817175559253752}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 500668765896e3e47896ed08aa8f7bce, type: 3}
+  m_Script: {fileID: 11500000, guid: 0685784035e7c3f46bfec1158307a0f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Amount: 10
-  Type: 1
---- !u!212 &212473162111761302
+  Amount: 5
+--- !u!212 &212246139675278286
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1592133863581494}
+  m_GameObject: {fileID: 1817175559253752}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -102,12 +129,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: bc29e2bf5bd430640ac8ce9d5776ca55, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4614aec9fe390d84b8aafa99ce217aef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10.24, y: 10.24}
+  m_Size: {x: 0.49, y: 0.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

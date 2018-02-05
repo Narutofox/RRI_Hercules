@@ -10,5 +10,7 @@ namespace Assets.Scripts
         public const string SaveFairy = "SaveFairy";
         public const string Untagged = "Untagged";
         public const string Player = "Player";
+        public const string FireSword = "FireSword";
+        public const string LightningSword = "LightningSword";
     }
 }
