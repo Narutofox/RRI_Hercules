@@ -19,6 +19,7 @@ public class PlayerAttack : MonoBehaviour {
     public bool InvincibleBecauseOfDamage;
     private PlayerHealth PlayerHealthScript;
     public bool Attacking;
+    private WeaponChangeImage WeaponChangeImageScript;
     // Use this for initialization
     void Start () {
         Anim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
@@ -36,6 +37,8 @@ public class PlayerAttack : MonoBehaviour {
         
         currentWeaponIndex = 0;
         Attacking = false;
+        WeaponChangeImageScript = GameObject.Find("WeaponImage").GetComponent<WeaponChangeImage>();
+        WeaponChangeImageScript.ChangeImage(WeapnosArray[currentWeaponIndex]);
     }
 	
 	// Update is called once per frame
@@ -149,8 +152,8 @@ public class PlayerAttack : MonoBehaviour {
         {
             PlayerStopInvincible();
         }
-        
-        
+
+        WeaponChangeImageScript.ChangeImage(WeapnosArray[currentWeaponIndex]);
     }
     private void PrevWeapon()
     {
@@ -195,6 +198,7 @@ public class PlayerAttack : MonoBehaviour {
         {
             PlayerStopInvincible();
         }
+        WeaponChangeImageScript.ChangeImage(WeapnosArray[currentWeaponIndex]);
     }
 
     public void PlayerInvincible()
@@ -273,13 +277,7 @@ public class PlayerAttack : MonoBehaviour {
     {
         InvincibleBecauseOfDamage = true;
     }
-    private enum Weapons
-    {
-        Normal,
-        Fire,
-        Lightning,
-        Invincible
-    }
+   
 
     public void StartAttack()
     {
