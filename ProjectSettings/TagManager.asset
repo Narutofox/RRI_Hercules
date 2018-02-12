@@ -15,6 +15,10 @@ TagManager:
   - KnightEnemy
   - LightningSword
   - FireSword
+  - BG
+  - LeftBorder
+  - RightBorder
+  - ArrowTrap
   layers:
   - Default
   - TransparentFX

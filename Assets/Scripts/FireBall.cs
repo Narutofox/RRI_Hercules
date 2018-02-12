@@ -7,7 +7,7 @@ public class FireBall : MonoBehaviour {
 
     private Animator Anim;
     private Rigidbody2D RB2D;
-    private float timeLeft = 10; // Nakon 10 sekundi se uništi
+    private float timeLeft = 2; // Nakon 3 sekundi se uništi
     private float shootForce = 20f;
     private SpriteRenderer Sprite;
     private Player PlayerScript;
@@ -47,7 +47,7 @@ public class FireBall : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag != Tags.SaveFairy && collision.gameObject.tag != Tags.Player)
+        if (collision.gameObject.tag != Tags.SaveFairy && collision.gameObject.tag != Tags.Player && collision.gameObject.tag != Tags.FireSword && collision.gameObject.tag != Tags.LightningSword)
         {
             var Enemy = collision.gameObject.GetComponent(typeof(Enemy));
             if (Enemy != null)

@@ -77,7 +77,7 @@ public class ArrowScript : MonoBehaviour,IEnemyAttack {
     private void OnCollisionEnter2D(Collision2D collision)
     {
         var CollisonGameObject = collision.gameObject;
-        if (CollisonGameObject.tag != Tags.SaveFairy && CollisonGameObject.GetComponent(typeof(Enemy)) == null)
+        if (CollisonGameObject.tag != Tags.SaveFairy && CollisonGameObject.tag != Tags.Untagged)
         {
             Die();
         }      
