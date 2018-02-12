@@ -6,12 +6,18 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    [Serializable]
+    [System.Serializable]
     public class SaveGameFile
     {
-        public Transform Position { get; set; }
-        public string Level { get; set; }
-        public PlayerHealth PlayerHealth { get; set; }
-        public PlayerAttack PlayerAttack { get; set; }
+        public float x;
+        public float y;
+        public string Level;
+        public int PlayerMaxHealth;
+        public int PlayerHealth;
+        public int NumberOfFireballShots;
+        public float NumberOfLightningSeconds;
+        public float NumberOfInvincibleSeconds;
+        public int Points;
+        public string PlayerName;
     }
 }
