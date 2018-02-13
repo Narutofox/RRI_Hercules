@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Coins : MonoBehaviour {
-    public Text BodoviText;
+    private Text BodoviText;
     private int Bodovi;
 
     private void Start()

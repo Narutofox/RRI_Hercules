@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour, IEnemy,IEnemyAttack{
     private float AttackInterval = 3;
     private Animator Anim;
     private float RaycastOffset = 0.5f;
-    private float RaycastDistance = 15f;
+    private float RaycastDistance = 10f;
     private Transform Player;
     private PlayerHealth PlayerHealthScript;
     public EnemyType Type;
@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour, IEnemy,IEnemyAttack{
     private Vector2 direction;
     private int Move = 1;
     public GameObject Coin;
+    internal bool IsDead;
 
     public int Damage { get; set; }
 
@@ -37,12 +38,13 @@ public class Enemy : MonoBehaviour, IEnemy,IEnemyAttack{
         PlayerHealthScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         CheckForFlip(Player);
         direction = new Vector2(1, 0);
-        Damage = 0;       
+        Damage = 0;
+        IsDead = false;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (PlayerHealthScript.IsDead)
+        if (PlayerHealthScript.IsDead || IsDead)
         {
             return;
         }
@@ -61,7 +63,7 @@ public class Enemy : MonoBehaviour, IEnemy,IEnemyAttack{
 
     private void FixedUpdate()
     {
-        if (PlayerHealthScript.IsDead)
+        if (PlayerHealthScript.IsDead || IsDead)
         {
             return;
         }
@@ -117,7 +119,7 @@ public class Enemy : MonoBehaviour, IEnemy,IEnemyAttack{
 
     private bool IsPlayerRightOfMe(Transform player) {
 
-        if (player.position.x > transform.position.x)
+        if (player != null && player.position.x > transform.position.x)
         {
             return true;
         }
@@ -194,11 +196,6 @@ public class Enemy : MonoBehaviour, IEnemy,IEnemyAttack{
         InstantiateArrow.GetComponent<ArrowScript>().Init(this.gameObject, ArrowDamage);
     }
 
-    public void ShortRangeAttack()
-    {
-
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
@@ -211,9 +208,12 @@ public class Enemy : MonoBehaviour, IEnemy,IEnemyAttack{
 
     public void Die()
     {
-        Anim.SetTrigger("Die");
-        this.enabled = false;
-       
+        if (IsDead == false)
+        {
+            Anim.SetTrigger("Die");
+            this.enabled = false;
+            IsDead = true;
+        }           
     }
 
     public enum EnemyType
