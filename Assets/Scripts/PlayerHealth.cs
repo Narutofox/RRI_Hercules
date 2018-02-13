@@ -1,5 +1,4 @@
-﻿using Assets.Scripts;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,20 +13,12 @@ public class PlayerHealth : MonoBehaviour {
     public Color MaxHealthColor = Color.green;
     public Color MinHealthColor = Color.red;
     public Image FillImage;
-    private GameManager GameManager;
 
     // Use this for initialization
     void Start () {
         Anim = GetComponent<Animator>();
         Player = GetComponent<Player>();
         PlayerAttack = GetComponent<PlayerAttack>();
-        GameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        if (PersistanceManager.SaveFileExists() && PersistanceManager.LoadGame().Level == UnityEngine.SceneManagement.SceneManager.GetActiveScene().name)
-        {
-            SaveGameFile SaveFile = PersistanceManager.LoadGame();
-            HealthSlider.maxValue = SaveFile.PlayerMaxHealth;
-            HealthSlider.value = SaveFile.PlayerHealth;
-        }
     }
 	
 	// Update is called once per frame
@@ -60,13 +51,8 @@ public class PlayerHealth : MonoBehaviour {
     {        
         Anim.SetBool("Alive", false);
         Player.enabled = false;
-        
     }
 
-    public void AfterDeathAnimation()
-    {
-        GameManager.PlayerDead();
-    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         var EnemyAttack = collision.gameObject.GetComponent(typeof(IEnemyAttack));
@@ -96,10 +82,12 @@ public class PlayerHealth : MonoBehaviour {
             if (HealthSlider.value + potion.Amount <= HealthSlider.maxValue)
             {
                 HealthSlider.value += potion.Amount;
-                FillImage.color = Color.Lerp(MinHealthColor, MaxHealthColor, HealthSlider.value / HealthSlider.maxValue);
-                Destroy(potion.gameObject);
             }
-
+            else
+            {
+                HealthSlider.value = HealthSlider.maxValue;
+            }
+            FillImage.color = Color.Lerp(MinHealthColor, MaxHealthColor, HealthSlider.value / HealthSlider.maxValue);
         }
         else if (potion.Type == PotionType.HealthBar)
         {
@@ -107,10 +95,9 @@ public class PlayerHealth : MonoBehaviour {
             RectTransform RectTrans = HealthSlider.GetComponent<RectTransform>();
             Vector2 WidthHeight = RectTrans.sizeDelta;
             WidthHeight.x += potion.Amount;
-            Destroy(potion.gameObject);
         }
 
-       
+        Destroy(potion.gameObject);
     }
 
 }

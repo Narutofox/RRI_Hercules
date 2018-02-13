@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 61946463617800354}
   - component: {fileID: 50029680063238304}
   - component: {fileID: 114996262950646788}
-  - component: {fileID: 68066758547380996}
   m_Layer: 0
   m_Name: ArrowForTraps
   m_TagString: TrapArrow
@@ -43,7 +42,6 @@ GameObject:
   - component: {fileID: 61913525246903414}
   - component: {fileID: 50795094689850958}
   - component: {fileID: 114107198832813632}
-  - component: {fileID: 68530311561223410}
   m_Layer: 0
   m_Name: ArrowForTraps (2)
   m_TagString: TrapArrow
@@ -106,7 +104,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1845109280284266}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 61.718376, y: -0.9429059, z: 0}
+  m_LocalPosition: {x: -0.3599976, y: 1.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4676965462094376}
@@ -276,40 +274,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.7, y: 0.34}
   m_EdgeRadius: 0
---- !u!68 &68066758547380996
-EdgeCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1127899530566618}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -25.488596, y: 0.0804925}
-  - {x: 0.47000027, y: 0}
---- !u!68 &68530311561223410
-EdgeCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1627060860633642}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -25.077427, y: 0.056118943}
-  - {x: 0.47000027, y: 0}
 --- !u!95 &95986872838976892
 Animator:
   serializedVersion: 3
@@ -400,8 +364,6 @@ SpriteRenderer:
   m_Size: {x: 4.7, y: 0.34}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!212 &212263812699243122
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -442,8 +404,6 @@ SpriteRenderer:
   m_Size: {x: 4.7, y: 0.34}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!212 &212530708245420630
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -484,5 +444,3 @@ SpriteRenderer:
   m_Size: {x: 4.7, y: 0.34}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0

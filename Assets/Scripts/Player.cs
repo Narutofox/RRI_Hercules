@@ -1,9 +1,7 @@
-﻿using Assets.Scripts;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 
@@ -17,19 +15,18 @@ public class Player : MonoBehaviour {
     public float jumpForce;
     private PlayerAttack PlayerAttackScript;
     private float jumpTimestamp = -1f;
-    private Text BodoviText;
+   
     // Use this for initialization
     void Start() {
-        RB2D = GetComponent<Rigidbody2D>();
-        Anim = GetComponent<Animator>();
-        PlayerAttackScript = GetComponent<PlayerAttack>();
-       
+        RB2D = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
+        Anim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
         if (PersistanceManager.SaveFileExists() && PersistanceManager.LoadGame().Level == UnityEngine.SceneManagement.SceneManager.GetActiveScene().name)
         {
-            BodoviText = GameObject.Find("Bodovi").GetComponent<Text>();
-            SaveGameFile SaveFile = PersistanceManager.LoadGame();
-            this.transform.position = new Vector3 { x = SaveFile.x, y = SaveFile.y, z = 0 };
-            BodoviText.text = SaveFile.Points.ToString();
+            PlayerAttackScript = PersistanceManager.LoadGame().PlayerAttack;
+        }
+        else
+        {
+            PlayerAttackScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAttack>();
         }
 
         CONST_DEFAULT_GRAVITY = RB2D.gravityScale;
@@ -52,14 +49,8 @@ public class Player : MonoBehaviour {
             RB2D.gravityScale += Time.deltaTime * 2;
         }
 
-        // Ako pada nije na zemlji
-        if (RB2D.velocity.y < -0.1)
-        {
-            isGrounded = false;
-            Anim.SetBool("inAir", true);
-            RB2D.gravityScale += Time.deltaTime * 2;
-            Anim.SetBool("Landing", true);
-        }
+
+       
 
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
@@ -199,7 +190,7 @@ public class Player : MonoBehaviour {
             if (Anim.GetBool("inAir"))
             {
                 Anim.SetTrigger("Land");               
-                //transform.position = new Vector3(transform.position.x, 0.55f, transform.position.z);
+                transform.position = new Vector3(transform.position.x, 0.55f, transform.position.z);
             }
             isGrounded = true;
         }

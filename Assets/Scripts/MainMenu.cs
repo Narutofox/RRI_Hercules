@@ -8,52 +8,28 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour {
 
     // Use this for initialization
-    Button LoadGameButton;
-    Text YouDied;
-    private GameManager GameManager;
-    public InputField PlayerName;
-    void Start () {
-        LoadGameButton = GameObject.FindGameObjectWithTag("btnLoadGame").GetComponent<Button>();
-        GameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    Button LoadGameButton; 
+	void Start () {
+        LoadGameButton = GameObject.FindGameObjectWithTag("Player").GetComponent<Button>();
         if (PersistanceManager.SaveFileExists())
         {
-            LoadGameButton.interactable = true;
+            LoadGameButton.enabled = true;
         }
         else
         {
-            LoadGameButton.interactable = false;
+            LoadGameButton.enabled = false;
         }
 
-        YouDied = GameObject.Find("YouDiedText").GetComponent<Text>();
-        if (GameManager.PlayerDied)
-        {
-            YouDied.enabled = true;
-        }
-        else
-        {
-            YouDied.enabled = false;
-        }
     }
     public void StartGame()
     {
-        if (!string.IsNullOrEmpty(PlayerName.text))
-        {
-            PersistanceManager.DeleteSaveFile();
-            GameManager.PlayerName = PlayerName.text;
-            GameManager.LoadLevel("S1");
-        }
-       else
-        {
-           
-        }
+        PersistanceManager.DeleteSaveFile();
+        SceneManager.LoadScene("S1");
     }
 
     public void LoadGame()
     {
-        SaveGameFile SaveFile = PersistanceManager.LoadGame();
-        PlayerName.text = SaveFile.PlayerName;
-        GameManager.PlayerName = SaveFile.PlayerName;
-        GameManager.LoadLevel(SaveFile.Level);
+        SceneManager.LoadScene(PersistanceManager.LoadGame().Level);
     }
 
     public void ExitGame()
