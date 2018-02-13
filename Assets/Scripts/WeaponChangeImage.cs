@@ -14,32 +14,26 @@ public class WeaponChangeImage : MonoBehaviour {
     private void Start()
     {
         WeaponImage =  this.gameObject.GetComponent<Image>();
-        WeaponImage.sprite = Sword;
     }
 
     public void ChangeImage(Weapons weapon)
     {
-        if (WeaponImage != null)
+        switch (weapon)
         {
-            switch (weapon)
-            {
-                case Weapons.Normal:
-                    WeaponImage.sprite = Sword;
-                    break;
-                case Weapons.Fire:
-                    WeaponImage.sprite = Fire;
-                    break;
-                case Weapons.Lightning:
-                    WeaponImage.sprite = Lightning;
-                    break;
-                case Weapons.Invincible:
-                    WeaponImage.sprite = Invincible;
-                    break;
-                default:
-                    WeaponImage.sprite = Sword;
-                    break;
-            }
+            case Weapons.Normal:
+                WeaponImage.sprite = Sword;
+                break;
+            case Weapons.Fire:
+                WeaponImage.sprite = Fire;
+                break;
+            case Weapons.Lightning:
+                WeaponImage.sprite = Lightning;
+                break;
+            case Weapons.Invincible:
+                WeaponImage.sprite = Invincible;
+                break;
+            default:
+                break;
         }
-
     }
 }

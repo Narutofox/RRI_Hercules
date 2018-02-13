@@ -1,5 +1,0 @@
-﻿Muzika vatra - Neznam koja
-Centrirati kameru tako da je igrač uvijek u sredini - SuperJura
-High score
-Završno testiranje
-Na Esc neka se pojavi meni sa continue ili return na main menu

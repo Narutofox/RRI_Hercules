@@ -16,13 +16,9 @@ public class Lightning : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         NumberOfSecondsLasting += Time.deltaTime;
-        if (NumberOfSecondsLasting >= NumberOfSecondsRemaining )
+        if (NumberOfSecondsLasting >= NumberOfSecondsRemaining)
         {
             PlayerAttackScript.StopLightningAttack();
-        }
-        else if (PlayerAttackScript.CurrentWeapon() != Weapons.Lightning || PlayerAttackScript.IsAttacking() == false)
-        {
-            Destroy(gameObject);
         }
     }
     
@@ -31,6 +27,14 @@ public class Lightning : MonoBehaviour {
         Destroy(gameObject);
     }
 
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    var Enemy = collision.gameObject.GetComponent(typeof(Enemy));
+    //    if (Enemy != null)
+    //    {
+    //        (Enemy as Enemy).Die();
+    //    }       
+    //}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
