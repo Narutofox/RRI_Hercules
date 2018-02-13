@@ -9,9 +9,10 @@ public class WeaponPickup : MonoBehaviour {
     private PlayerAttack PlayerAttackScript;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        PlayerAttackScript = GameObject.FindGameObjectWithTag(Tags.Player).GetComponent<PlayerAttack>();
-        if (PlayerAttackScript != null)
+        Player PlayerScript = collision.GetComponent<Player>();
+        if (PlayerScript != null)
         {
+            PlayerAttackScript = collision.GetComponent<PlayerAttack>();
             if (this.gameObject.tag == Tags.FireSword)
             {
                 PlayerAttackScript.AddFireballShots(Amount);
@@ -20,7 +21,7 @@ public class WeaponPickup : MonoBehaviour {
             {
                 PlayerAttackScript.AddLightningSeconds(Amount);
             }
-            Destroy(collision.gameObject);
+            Destroy(this.gameObject);
         }
     }
 
