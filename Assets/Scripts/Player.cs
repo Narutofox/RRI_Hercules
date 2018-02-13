@@ -18,12 +18,13 @@ public class Player : MonoBehaviour {
     private PlayerAttack PlayerAttackScript;
     private float jumpTimestamp = -1f;
     private Text BodoviText;
+    private SpriteRenderer Sprite;
     // Use this for initialization
     void Start() {
         RB2D = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
         PlayerAttackScript = GetComponent<PlayerAttack>();
-       
+        Sprite = GetComponent<SpriteRenderer>();
         if (PersistanceManager.SaveFileExists() && PersistanceManager.LoadGame().Level == UnityEngine.SceneManagement.SceneManager.GetActiveScene().name)
         {
             BodoviText = GameObject.Find("Bodovi").GetComponent<Text>();
@@ -175,12 +176,13 @@ public class Player : MonoBehaviour {
     {
         PlayerAttackScript.StopLightningAttack();
         facingRight = !facingRight;
-        // Dohvat trenutne skalacije
-        Vector3 theScale = transform.localScale;
-        // Obrtanje X-osi
-        theScale.x *= -1;
-        // Postavljanje vrijednosti
-        transform.localScale = theScale;
+        //// Dohvat trenutne skalacije
+        //Vector3 theScale = transform.localScale;
+        //// Obrtanje X-osi
+        //theScale.x *= -1;
+        //// Postavljanje vrijednosti
+        //transform.localScale = theScale;
+        Sprite.flipX = !Sprite.flipX;
     }
 
    

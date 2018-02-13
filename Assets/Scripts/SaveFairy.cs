@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,7 +23,7 @@ public class SaveFairy : MonoBehaviour {
     {
         if (CanSave)
         {
-            if (collision.gameObject.tag == "Player")
+            if (collision.gameObject.tag == Tags.Player)
             {
                 PersistanceManager.SaveGame();
                 Anim.SetTrigger("Save");
