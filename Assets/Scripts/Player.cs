@@ -164,10 +164,14 @@ public class Player : MonoBehaviour {
 
     void Flip()
     {
-        SpriteRenderer renderer = GetComponent<SpriteRenderer>();
         PlayerAttackScript.StopLightningAttack();
         facingRight = !facingRight;
-        renderer.flipX = !renderer.flipX;
+        // Dohvat trenutne skalacije
+        Vector3 theScale = transform.localScale;
+        // Obrtanje X-osi
+        theScale.x *= -1;
+        // Postavljanje vrijednosti
+        transform.localScale = theScale;
     }
 
    

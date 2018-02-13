@@ -20,7 +20,7 @@ public class WeaponPickup : MonoBehaviour {
             {
                 PlayerAttackScript.AddLightningSeconds(Amount);
             }
-            Destroy(gameObject);
+            Destroy(collision.gameObject);
         }
     }
 
