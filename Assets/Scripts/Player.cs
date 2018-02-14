@@ -5,7 +5,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Player : MonoBehaviour {
+public class Player : MonoBehaviour
+{
 
     private float CONST_DEFAULT_GRAVITY;
 
@@ -218,5 +219,4 @@ public class Player : MonoBehaviour {
             isGrounded = true;
         }
     }
-
 }

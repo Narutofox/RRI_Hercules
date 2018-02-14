@@ -12,6 +12,7 @@ public class MainMenu : MonoBehaviour {
     Text YouDied;
     private GameManager GameManager;
     public InputField PlayerName;
+    public PauseMenu Menu;
     void Start () {
         LoadGameButton = GameObject.FindGameObjectWithTag("btnLoadGame").GetComponent<Button>();
         GameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -40,11 +41,8 @@ public class MainMenu : MonoBehaviour {
         {
             PersistanceManager.DeleteSaveFile();
             GameManager.PlayerName = PlayerName.text;
+            Menu.enabled = true;
             GameManager.LoadLevel("S1");
-        }
-       else
-        {
-           
         }
     }
 
@@ -53,6 +51,7 @@ public class MainMenu : MonoBehaviour {
         SaveGameFile SaveFile = PersistanceManager.LoadGame();
         PlayerName.text = SaveFile.PlayerName;
         GameManager.PlayerName = SaveFile.PlayerName;
+        Menu.enabled = true;
         GameManager.LoadLevel(SaveFile.Level);
     }
 

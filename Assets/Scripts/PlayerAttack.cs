@@ -49,7 +49,7 @@ public class PlayerAttack : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (PlayerHealthScript.IsDead)
+        if (PlayerHealthScript.IsDead || Time.timeScale == 0)
         {
             return;
         }

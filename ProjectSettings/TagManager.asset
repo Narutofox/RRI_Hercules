@@ -19,6 +19,7 @@ TagManager:
   - LeftBorder
   - RightBorder
   - ArrowTrap
+  - PauseMenu
   layers:
   - Default
   - TransparentFX
