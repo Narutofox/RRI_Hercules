@@ -40,5 +40,14 @@ public class Lightning : MonoBehaviour {
             (Enemy as Enemy).Die();
         }
     }
+
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    var Enemy = collision.gameObject.GetComponent(typeof(Enemy));
+    //    if (Enemy != null)
+    //    {
+    //        (Enemy as Enemy).Die();
+    //    }
+    //}
 }
 

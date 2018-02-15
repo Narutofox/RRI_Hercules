@@ -72,6 +72,12 @@ public class GameManager : MonoBehaviour {
             SceneManager.LoadScene(Level);
             CurrentLevel = Level;
         }
+        //else
+        //{
+        //    string Level = "MainMenu";
+        //    SceneManager.LoadScene(Level);
+        //    CurrentLevel = Level;
+        //}
     }
 
     public void PlayerDead()

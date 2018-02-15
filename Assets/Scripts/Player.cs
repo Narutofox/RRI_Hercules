@@ -119,10 +119,12 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-
-        // Ovisno o tome koji horizontalan gumb se pritišče
-        float move = Input.GetAxis("Horizontal");
-
+        float move = 0;
+        // Ovisno o tome koji horizontalan gumb se pritišče, nemože se micati tokom napda
+        if (PlayerAttackScript.IsAttacking() == false)
+        {
+            move = Input.GetAxis("Horizontal");
+        }
 
         //rb2d.velocity = new Vector2(move * maxSpeed, rb2d.velocity.y);
         // Ukoliko idemo u lijevo, a ne gledamo u lijevo

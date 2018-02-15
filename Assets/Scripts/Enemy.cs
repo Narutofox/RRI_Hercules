@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour, IEnemy,IEnemyAttack{
     public float maxSpeed = 1;
     internal bool facingRight;
     public GameObject Arrow;
+    public GameObject FireBall;
     //private Rigidbody2D RB2D;
     private bool CanAttack;
     private float AttackInterval = 3;
@@ -25,8 +26,12 @@ public class Enemy : MonoBehaviour, IEnemy,IEnemyAttack{
     private int Move = 1;
     public GameObject Coin;
     internal bool IsDead;
-
+    public int SetDamage = 0;
+    public int NumberOfCoinsToDrop = 2;
     public int Damage { get; set; }
+    public int Shields = 0;
+    public float MinDistanceToAttack = -2;
+    public float MaxDistanceToAttack = 1.5f;
 
     // Use this for initialization
     void Start () {
@@ -38,7 +43,7 @@ public class Enemy : MonoBehaviour, IEnemy,IEnemyAttack{
         PlayerHealthScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         CheckForFlip(Player);
         direction = new Vector2(1, 0);
-        Damage = 0;
+        Damage = SetDamage;
         IsDead = false;
     }
 	
@@ -145,19 +150,24 @@ public class Enemy : MonoBehaviour, IEnemy,IEnemyAttack{
         {
            
             Distance = Vector2.Distance(this.transform.position, Player.position);
-            if (Distance <= 1.5 && Distance >= -2)
+            if (Distance <= MaxDistanceToAttack && Distance >= MinDistanceToAttack)
             {
                 RB2D.velocity = Vector3.zero;
                 Anim.SetTrigger("Attack");
                 Anim.SetBool("Charge", false);
-                Damage = 20;
+
+                if (Damage <= 0)
+                {
+                    Damage = 20;
+                }
+                
             }
             else
             {
                 Anim.SetBool("Charge", true);
                 Vector2 movement = new Vector2(Move, 0);
                 RB2D.velocity = movement * maxSpeed;
-                Damage = 0;
+                Damage = SetDamage;
             }
         }
         else
@@ -195,6 +205,24 @@ public class Enemy : MonoBehaviour, IEnemy,IEnemyAttack{
 
         InstantiateArrow.GetComponent<ArrowScript>().Init(this.gameObject, ArrowDamage);
     }
+    public void ShootFireball()
+    {
+        GameObject InstantiateFireball;
+        float forceX;
+        if (facingRight)
+        {
+            InstantiateFireball = Instantiate(FireBall, new Vector3(transform.position.x + 2, transform.position.y+2), Quaternion.identity);
+            forceX = 5;
+        }
+        else
+        {
+            InstantiateFireball = Instantiate(FireBall, new Vector3(transform.position.x - 2, transform.position.y +2), Quaternion.identity);
+            forceX = -5;
+        }
+
+        InstantiateFireball.GetComponent<Rigidbody2D>().AddForce(new Vector2(forceX * 100, 1 * 100));
+    }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -210,9 +238,18 @@ public class Enemy : MonoBehaviour, IEnemy,IEnemyAttack{
     {
         if (IsDead == false)
         {
-            Anim.SetTrigger("Die");
-            this.enabled = false;
-            IsDead = true;
+            if (Shields > 0)
+            {
+                Anim.SetTrigger("Hit");
+                Shields--;
+            }
+            else
+            {
+                Anim.SetTrigger("Die");
+                this.enabled = false;
+                IsDead = true;
+            }
+          
         }           
     }
 
@@ -224,8 +261,14 @@ public class Enemy : MonoBehaviour, IEnemy,IEnemyAttack{
 
     public void Destroy()
     {
-        Instantiate(Coin, new Vector3(transform.position.x - 1, transform.position.y + 0.6f), Quaternion.identity);
-        Instantiate(Coin, new Vector3(transform.position.x + 1, transform.position.y + 0.6f), Quaternion.identity);
+        int AdditionToX = 1;
+
+        for (int i = 0; i < NumberOfCoinsToDrop; i++)
+        {
+            Instantiate(Coin, new Vector3(transform.position.x + AdditionToX, transform.position.y + 0.6f), Quaternion.identity);
+            AdditionToX++;
+        }
+        
         Destroy(this.gameObject);
     }
 }

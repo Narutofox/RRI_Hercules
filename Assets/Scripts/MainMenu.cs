@@ -13,9 +13,11 @@ public class MainMenu : MonoBehaviour {
     private GameManager GameManager;
     public InputField PlayerName;
     public PauseMenu Menu;
+    public HUDCanvas HUDCanvas;
     void Start () {
         LoadGameButton = GameObject.FindGameObjectWithTag("btnLoadGame").GetComponent<Button>();
         GameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        GameObject HealthCanvas = GameObject.Find("HUDCanvas");
         if (PersistanceManager.SaveFileExists())
         {
             LoadGameButton.interactable = true;
@@ -33,6 +35,11 @@ public class MainMenu : MonoBehaviour {
         else
         {
             YouDied.enabled = false;
+        }
+
+        if (HealthCanvas != null)
+        {
+            Destroy(HealthCanvas);
         }
     }
     public void StartGame()

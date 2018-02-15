@@ -13,5 +13,6 @@ namespace Assets.Scripts
         public const string FireSword = "FireSword";
         public const string LightningSword = "LightningSword";
         public const string PauseMenu = "PauseMenu";
+        public const string HUDCanvas = "HUDCanvas";
     }
 }

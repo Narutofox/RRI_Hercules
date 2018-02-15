@@ -7,7 +7,7 @@ public class FireBall : MonoBehaviour {
 
     private Animator Anim;
     private Rigidbody2D RB2D;
-    private float timeLeft = 2; // Nakon 3 sekundi se uništi
+    private float timeLeft = 2; // Nakon 2 sekundi se uništi
     private float shootForce = 20f;
     private SpriteRenderer Sprite;
     private Player PlayerScript;

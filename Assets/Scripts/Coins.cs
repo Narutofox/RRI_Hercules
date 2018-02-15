@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Coins : MonoBehaviour {
     private Text BodoviText;
     private int Bodovi;
-
+    public int Value = 1;
     private void Start()
     {
         BodoviText = GameObject.Find("Bodovi").GetComponent<Text>();
@@ -19,7 +19,7 @@ public class Coins : MonoBehaviour {
         if (collision.gameObject.tag == Tags.Player)
         {
             Bodovi = int.Parse(BodoviText.text.Trim());
-            Bodovi++;
+            Bodovi+= Value;
             BodoviText.text = Bodovi.ToString();
             Destroy(gameObject);
         }

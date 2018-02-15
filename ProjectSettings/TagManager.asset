@@ -20,6 +20,10 @@ TagManager:
   - RightBorder
   - ArrowTrap
   - PauseMenu
+  - DarkMage
+  - Zombie
+  - BlackKnight
+  - HUDCanvas
   layers:
   - Default
   - TransparentFX
