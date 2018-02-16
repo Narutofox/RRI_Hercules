@@ -49,15 +49,8 @@ public class PlayerHealth : MonoBehaviour {
         {
             HealthSlider.value -= amount;
 
-            try
-            {
-                FillImage.color = Color.Lerp(MinHealthColor, MaxHealthColor, HealthSlider.value / HealthSlider.maxValue);
-            }
-            catch (System.Exception)
-            {
-                
-                FillImage.color = Color.Lerp(MinHealthColor, MaxHealthColor, HealthSlider.value / HealthSlider.maxValue);
-            }
+            FillImage.color = Color.Lerp(MinHealthColor, MaxHealthColor, HealthSlider.value / HealthSlider.maxValue);
+
 
             if (HealthSlider.value <= 0)
             {
@@ -93,7 +86,7 @@ public class PlayerHealth : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var EnemyAttack = collision.gameObject.GetComponent(typeof(IEnemyAttack));
-        if (EnemyAttack != null)
+        if (EnemyAttack != null && (EnemyAttack as IEnemyAttack).IsAttacking)
         {
             TakeDamage((EnemyAttack as IEnemyAttack).Damage);
         }

@@ -51,3 +51,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e0d2f69803b0774cb850ad95cde8334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnemyHealthSlider: {fileID: 0}

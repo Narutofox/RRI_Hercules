@@ -7,6 +7,7 @@ using UnityEngine;
 public class TrapArrow : MonoBehaviour, IEnemyAttack
 {
     public int Damage {get; set;}
+    public bool IsAttacking { get; set; }
     private SpriteRenderer Sprite;
     private Animator Anim;
     private GameObject ArrowsTrap;
@@ -20,6 +21,7 @@ public class TrapArrow : MonoBehaviour, IEnemyAttack
        
         ArrowsTrap = this.transform.parent.gameObject;
         Anim = ArrowsTrap.GetComponent<Animator>();
+        IsAttacking = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

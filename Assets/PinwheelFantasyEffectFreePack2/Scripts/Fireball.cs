@@ -12,8 +12,13 @@ public class Fireball : MonoBehaviour, IEnemyAttack{
     public GameObject explosionParticle;
     private float timeLeft = 2; // Nakon 2 sekunde se uništi
     public Color FireballColor;
-
+    public bool DestroyOnGroundHit;
+    public bool GenerateItemsOnHit;
+    public GameObject[] PickUps;
     public int Damage { get; set; }
+
+    public bool IsAttacking { get; set; }
+
     void Start()
     {
         Damage = 20;
@@ -27,6 +32,7 @@ public class Fireball : MonoBehaviour, IEnemyAttack{
 
         ParticleSystem.MainModule Main = fieryParticle.GetComponent<ParticleSystem>().main;
         Main.startColor = new ParticleSystem.MinMaxGradient(FireballColor);
+        IsAttacking = true;
     }
 
     void Update()
@@ -39,7 +45,7 @@ public class Fireball : MonoBehaviour, IEnemyAttack{
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == Tags.Player)
+        if (collision.gameObject.tag == Tags.Player || (DestroyOnGroundHit && collision.gameObject.layer == LayerMask.NameToLayer("Ground")))
         {
             FireballHit();
         }
@@ -53,6 +59,12 @@ public class Fireball : MonoBehaviour, IEnemyAttack{
         smokeParticle.SetActive(false);
         explosionParticle.SetActive(true);
         rgbd.constraints = RigidbodyConstraints2D.FreezeAll;
+        if (GenerateItemsOnHit)
+        {
+            int i = UnityEngine.Random.Range(0, PickUps.Length-1);
+            Instantiate(PickUps[i], new Vector3(transform.position.x, transform.position.y + 2), Quaternion.identity);
+        }
+
         Destroy(this.gameObject);
     }
 }

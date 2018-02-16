@@ -54,6 +54,11 @@ public class FireBall : MonoBehaviour {
             {
                 (Enemy as Enemy).Die();
             }
+            else if (collision.gameObject.GetComponent(typeof(BossEnemy)))
+            {
+                Enemy = collision.gameObject.GetComponent(typeof(BossEnemy));
+                (Enemy as BossEnemy).TakeDamage(30, Weapons.Fire);
+            }
             Anim.SetBool("Hit", true);
         }
         

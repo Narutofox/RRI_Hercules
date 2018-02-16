@@ -29,6 +29,8 @@ public class Enemy : MonoBehaviour, IEnemy,IEnemyAttack{
     public int SetDamage = 0;
     public int NumberOfCoinsToDrop = 2;
     public int Damage { get; set; }
+    public bool IsAttacking { get; set; }
+
     public int Shields = 0;
     public float MinDistanceToAttack = -2;
     public float MaxDistanceToAttack = 1.5f;
@@ -60,6 +62,7 @@ public class Enemy : MonoBehaviour, IEnemy,IEnemyAttack{
             if (AttackInterval <= 0)
             {
                 CanAttack = true;
+                AttackInterval = 3;
             }
         }
         CheckForFlip(Player);
@@ -160,7 +163,6 @@ public class Enemy : MonoBehaviour, IEnemy,IEnemyAttack{
                 {
                     Damage = 20;
                 }
-                
             }
             else
             {
@@ -270,5 +272,15 @@ public class Enemy : MonoBehaviour, IEnemy,IEnemyAttack{
         }
         
         Destroy(this.gameObject);
+    }
+
+    public void StartAttack()
+    {
+        IsAttacking = true;
+    }
+
+    public void EndAttack()
+    {
+        IsAttacking = false;
     }
 }

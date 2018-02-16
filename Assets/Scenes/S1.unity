@@ -1982,31 +1982,26 @@ Prefab:
     - target: {fileID: 224485391367725380, guid: 885b919a754508e43a996ebe95c2be7f,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224485391367725380, guid: 885b919a754508e43a996ebe95c2be7f,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1361949020199384, guid: 885b919a754508e43a996ebe95c2be7f, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114953798595641758, guid: 885b919a754508e43a996ebe95c2be7f,
+    - target: {fileID: 224258145106917766, guid: 885b919a754508e43a996ebe95c2be7f,
         type: 2}
-      propertyPath: BodoviVrijednost
-      value: 
-      objectReference: {fileID: 1621099248}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224258145106917766, guid: 885b919a754508e43a996ebe95c2be7f,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 885b919a754508e43a996ebe95c2be7f, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1621099248 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114435889403670690, guid: 885b919a754508e43a996ebe95c2be7f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1621099247}
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1699237644
 Prefab:
   m_ObjectHideFlags: 0

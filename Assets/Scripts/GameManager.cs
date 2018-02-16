@@ -8,9 +8,15 @@ public class GameManager : MonoBehaviour {
     public static bool PlayerDied = false;
     public static int ScoreTotal = 0;
     public static string PlayerName;
+    private GameObject EnemyHealthSlider;
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
+        EnemyHealthSlider = GameObject.Find("EnemyHealthSlider");
+        if (EnemyHealthSlider != null)
+        {
+            EnemyHealthSlider.SetActive(false);
+        }
     }
 
     public void LoadLevel(int level)
@@ -84,5 +90,15 @@ public class GameManager : MonoBehaviour {
     {
         PlayerDied = true;
         LoadLevel("MainMenu");
+    }
+
+    public void BossLevelStart()
+    {
+        EnemyHealthSlider.SetActive(true);
+    }
+
+    public void BossLevelEnd()
+    {
+        EnemyHealthSlider.SetActive(false);
     }
 }

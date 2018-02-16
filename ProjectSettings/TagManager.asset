@@ -26,6 +26,8 @@ TagManager:
   - HUDCanvas
   - BossEnemy
   - FillImage
+  - ExitPortal
+  - EnemyFillImage
   layers:
   - Default
   - TransparentFX

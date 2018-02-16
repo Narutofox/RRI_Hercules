@@ -281,7 +281,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1812361678848294}
   m_LocalRotation: {x: -0, y: -0, z: -0.9998704, w: -0.016100312}
-  m_LocalPosition: {x: -4.87, y: 7.24, z: 0}
+  m_LocalPosition: {x: -4.12, y: 4.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4286445370789776}
@@ -340,6 +340,15 @@ MonoBehaviour:
   fieryParticle: {fileID: 1401002274602384}
   smokeParticle: {fileID: 1373750455067182}
   explosionParticle: {fileID: 1822196286189788}
+  FireballColor: {r: 0, g: 0, b: 0, a: 0}
+  DestroyOnGroundHit: 0
+  GenerateItemsOnHit: 0
+  PickUps:
+  - {fileID: 1161794585189636, guid: 9838580d844ff3d48a3fb96a85e6816a, type: 2}
+  - {fileID: 1860454324329158, guid: 9322eb071265be24bb3994ba338206a3, type: 2}
+  - {fileID: 1463843587094370, guid: 8d3c783551243ef40afd8e9b33703816, type: 2}
+  - {fileID: 1592133863581494, guid: 91746f8e094584547bef42a962666c99, type: 2}
+  - {fileID: 1817175559253752, guid: d3ec8dd06c3c96840833eb4239c3c963, type: 2}
 --- !u!198 &198018846907466258
 ParticleSystem:
   m_ObjectHideFlags: 1

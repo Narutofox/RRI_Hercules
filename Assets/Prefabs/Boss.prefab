@@ -65,6 +65,12 @@ MonoBehaviour:
   Health: 500
   maxSpeed: 1
   facingRight: 0
+  LightningResistance: 0
+  FireResistance: 0
+  PhysicalResistance: 0
+  LongRangeAttack: {fileID: 0}
+  MaxHealthColor: {r: 0, g: 1, b: 0, a: 1}
+  MinHealthColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!212 &212551327802568446
 SpriteRenderer:
   m_ObjectHideFlags: 1
