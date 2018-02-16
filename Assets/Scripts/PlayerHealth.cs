@@ -6,14 +6,14 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour {
 
-    public Slider HealthSlider;
+    internal Slider HealthSlider;
     internal bool IsDead;
     private Animator Anim;
     private Player Player;
     private PlayerAttack PlayerAttack;
     public Color MaxHealthColor = Color.green;
     public Color MinHealthColor = Color.red;
-    public Image FillImage;
+    private Image FillImage;
     private GameManager GameManager;
 
     // Use this for initialization
@@ -22,12 +22,17 @@ public class PlayerHealth : MonoBehaviour {
         Player = GetComponent<Player>();
         PlayerAttack = GetComponent<PlayerAttack>();
         GameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        FillImage = GameObject.FindGameObjectWithTag("FillImage").GetComponent<Image>();
+        HealthSlider = GameObject.Find("HealthSlider").GetComponent<Slider>();
         if (PersistanceManager.SaveFileExists() && PersistanceManager.LoadGame().Level == UnityEngine.SceneManagement.SceneManager.GetActiveScene().name)
         {
             SaveGameFile SaveFile = PersistanceManager.LoadGame();
             HealthSlider.maxValue = SaveFile.PlayerMaxHealth;
             HealthSlider.value = SaveFile.PlayerHealth;
         }
+
+        
+
     }
 	
 	// Update is called once per frame
@@ -43,7 +48,17 @@ public class PlayerHealth : MonoBehaviour {
         if (!IsDead && PlayerAttack.IsInvincible() == false)
         {
             HealthSlider.value -= amount;
-            FillImage.color = Color.Lerp(MinHealthColor, MaxHealthColor, HealthSlider.value / HealthSlider.maxValue);
+
+            try
+            {
+                FillImage.color = Color.Lerp(MinHealthColor, MaxHealthColor, HealthSlider.value / HealthSlider.maxValue);
+            }
+            catch (System.Exception)
+            {
+                
+                FillImage.color = Color.Lerp(MinHealthColor, MaxHealthColor, HealthSlider.value / HealthSlider.maxValue);
+            }
+
             if (HealthSlider.value <= 0)
             {
                 IsDead = true;

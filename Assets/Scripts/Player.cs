@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
 
     private float CONST_DEFAULT_GRAVITY;
 
-    public float maxSpeed = 100f;
+    public float maxSpeed = 80f;
     public bool facingRight = true;
     private Rigidbody2D RB2D;
     private Animator Anim;
@@ -119,12 +119,13 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        float move = 0;
+        float move = Input.GetAxis("Horizontal");
         // Ovisno o tome koji horizontalan gumb se pritišče, nemože se micati tokom napda
-        if (PlayerAttackScript.IsAttacking() == false)
+        if (PlayerAttackScript.IsAttacking() && isGrounded)
         {
-            move = Input.GetAxis("Horizontal");
+            move = 0;
         }
+
 
         //rb2d.velocity = new Vector2(move * maxSpeed, rb2d.velocity.y);
         // Ukoliko idemo u lijevo, a ne gledamo u lijevo

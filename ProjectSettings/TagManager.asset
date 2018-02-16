@@ -24,6 +24,8 @@ TagManager:
   - Zombie
   - BlackKnight
   - HUDCanvas
+  - BossEnemy
+  - FillImage
   layers:
   - Default
   - TransparentFX

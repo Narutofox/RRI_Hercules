@@ -14,7 +14,7 @@ public class PlayerAttack : MonoBehaviour {
     private Player PlayerScript;
     private Rigidbody2D RB2D;
     public int NumberOfFireballShots = 5;
-    public float NumberOfLightningSeconds = 5;
+    public float NumberOfLightningSeconds = 3;
     public float NumberOfInvincibleSeconds = 10;
     private float NumberOfInvincibleDamageSeconds = 5;
     public bool InvincibleBecauseOfDamage;
