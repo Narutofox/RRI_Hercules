@@ -53,9 +53,9 @@ public class GameManager : MonoBehaviour {
                 case "S1":                   
                     Level = "S2";
                         break;
-                case "S2":
-                    Level = "S3";
-                    break;
+                //case "S2":
+                //    Level = "S3";
+                //    break;
                 case "S3":
                     PersistanceManager.AddHighScore(PlayerName, ScoreTotal);
                     Level = "MainMenu";
