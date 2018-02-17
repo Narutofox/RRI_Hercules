@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,13 +13,20 @@ public class GameManager : MonoBehaviour {
     public static bool GameComplete = false;
     void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
-        EnemyHealthSlider = GameObject.Find("EnemyHealthSlider");
-        if (EnemyHealthSlider != null)
+        if (GameObject.FindGameObjectsWithTag(Tags.GameManager).Length > 1)
         {
-            EnemyHealthSlider.SetActive(false);
+            Destroy(this.gameObject);            
         }
-        SceneManager.sceneLoaded += SceneManager_sceneLoaded;
+       else
+        {
+            DontDestroyOnLoad(this.gameObject);
+            EnemyHealthSlider = GameObject.Find("EnemyHealthSlider");
+            if (EnemyHealthSlider != null)
+            {
+                EnemyHealthSlider.SetActive(false);
+            }
+            SceneManager.sceneLoaded += SceneManager_sceneLoaded;
+        }
     }
 
     private void SceneManager_sceneLoaded(Scene arg0, LoadSceneMode arg1)
@@ -117,6 +125,15 @@ public class GameManager : MonoBehaviour {
 
     public void BossLevelEnd()
     {
-        EnemyHealthSlider.SetActive(false);
+        if (EnemyHealthSlider == null)
+        {
+            EnemyHealthSlider = GameObject.Find("EnemyHealthSlider");
+        }
+
+        if (EnemyHealthSlider != null)
+        {
+            EnemyHealthSlider.SetActive(false);
+        }
+        
     }
 }

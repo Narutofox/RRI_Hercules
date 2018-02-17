@@ -89,7 +89,17 @@ public class MainMenu : MonoBehaviour {
         SaveGameFile SaveFile = PersistanceManager.LoadGame();
         PlayerName.text = SaveFile.PlayerName;
         GameManager.PlayerName = SaveFile.PlayerName;
-        Menu.enabled = true;
+        GameManager.ScoreTotal = SaveFile.TotalPoints;
+        try
+        {
+            Menu.enabled = true;
+        }
+        catch (MissingReferenceException)
+        {
+            Menu = GameObject.FindGameObjectWithTag(Tags.PauseMenu).GetComponent<PauseMenu>();
+            Menu.enabled = true;
+        }
+       
         GameManager.LoadLevel(SaveFile.Level);
     }
 

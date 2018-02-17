@@ -12,16 +12,58 @@ public class PauseMenu : MonoBehaviour {
     public GameObject ReturnToMainMenu;
     // Use this for initialization
     void Start () {
-        DontDestroyOnLoad(this.gameObject);
-        HideButtons();
+        if (GameObject.FindGameObjectsWithTag(Tags.PauseMenu).Length > 1)
+        {
+            Destroy(this.gameObject);
+           
+        }
+        else
+        {
+            DontDestroyOnLoad(this.gameObject);
+            HideButtons();
+        }
+        SceneManager.sceneLoaded += SceneManager_sceneLoaded;
+        
     }
-	
-	// Update is called once per frame
-	void Update () {
-        if (Input.GetKeyDown(KeyCode.Escape))
+
+    private void SceneManager_sceneLoaded(Scene arg0, LoadSceneMode arg1)
+    {
+        if (arg0.name == "MainMenu")
+        {
+            try
+            {
+                this.enabled = false;
+            }
+            catch (MissingReferenceException)
+            {
+            }
+        }
+        else
+        {
+            try
+            {
+                this.enabled = true;
+            }
+            catch (MissingReferenceException)
+            {
+
+            }
+            
+        }
+    }
+
+    // Update is called once per frame
+    void Update () {
+        
+        if (Input.GetKeyDown(KeyCode.Escape) && Time.timeScale == 1)
         {
             Time.timeScale = 0;
             ShowButtons();
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && Time.timeScale == 0)
+        {
+            Time.timeScale = 1;
+            HideButtons();
         }
     }
 

@@ -18,6 +18,7 @@ namespace Assets.Scripts
         public float NumberOfLightningSeconds;
         public float NumberOfInvincibleSeconds;
         public int Points;
+        public int TotalPoints;
         public string PlayerName;
     }
 }

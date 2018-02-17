@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114075250849977190}
   m_Layer: 2
   m_Name: HealthBarExtend
-  m_TagString: Untagged
+  m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
