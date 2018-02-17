@@ -4,16 +4,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System;
+using System.Linq;
 
 public class MainMenu : MonoBehaviour {
 
     // Use this for initialization
     Button LoadGameButton;
-    Text YouDied;
+    Text MsgText;
     private GameManager GameManager;
     public InputField PlayerName;
     public PauseMenu Menu;
     public HUDCanvas HUDCanvas;
+    public RectTransform ScrollContent;
+    public GameObject HighScoreTextObject;
     void Start () {
         LoadGameButton = GameObject.FindGameObjectWithTag("btnLoadGame").GetComponent<Button>();
         GameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -27,21 +31,48 @@ public class MainMenu : MonoBehaviour {
             LoadGameButton.interactable = false;
         }
 
-        YouDied = GameObject.Find("YouDiedText").GetComponent<Text>();
+        MsgText = GameObject.Find("MsgText").GetComponent<Text>();
         if (GameManager.PlayerDied)
         {
-            YouDied.enabled = true;
+            MsgText.text = "You died. Sry :( Try again.";
+            MsgText.enabled = true;
+        }
+        else if (GameManager.GameComplete)
+        {
+            MsgText.text = "Congratualtions! Check high scores.";
+            MsgText.enabled = true;
         }
         else
         {
-            YouDied.enabled = false;
+            MsgText.enabled = false;
         }
 
         if (HealthCanvas != null)
         {
             Destroy(HealthCanvas);
         }
+
+        ShowHighScores();
     }
+
+    private void ShowHighScores()
+    {
+        List<HighScore> HighScores = PersistanceManager.GetHighScores();
+        if (HighScores.Count > 0)
+        {
+            foreach (var highScore in HighScores.OrderBy(x => x.Points))
+            {
+                GameObject newText = (GameObject)Instantiate(HighScoreTextObject);
+                newText.transform.SetParent(ScrollContent);
+                newText.GetComponent<Text>().text = highScore.Name + " - " + highScore.Points;
+            }
+        }
+       else
+        {
+            GameObject.Find("HighScoresPanel").SetActive(false);
+        }
+    }
+
     public void StartGame()
     {
         if (!string.IsNullOrEmpty(PlayerName.text))

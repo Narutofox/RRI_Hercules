@@ -6,11 +6,12 @@ using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 public class PersistanceManager  {
 
     private static string SaveGamePath { get { return Application.persistentDataPath + "/SaveGame.save"; }  }
-    private static string HighScoreSavePath { get { return Application.persistentDataPath + "/HighScore.bin"; } }
+    private static string HighScoreSavePath { get { return Application.persistentDataPath + "/HighScore.save"; } }
     public static void SaveGame()
     {
        Transform PlayerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -79,7 +80,10 @@ public class PersistanceManager  {
         {         
             file = File.Open(HighScoreSavePath, FileMode.Open);
             string stringFromFile = (string)bf.Deserialize(file);
-            HighScores = JsonUtility.FromJson<List<HighScore>>(stringFromFile);
+            HighScores = JsonConvert.DeserializeObject<List<HighScore>>(stringFromFile);
+            file.Close();
+            File.Delete(HighScoreSavePath);
+            file = File.Create(HighScoreSavePath);
         }
         else
         {
@@ -88,11 +92,24 @@ public class PersistanceManager  {
         }
 
         HighScores.Add(Score);
-        SaveJSON = JsonUtility.ToJson(HighScores);
+        SaveJSON = JsonConvert.SerializeObject(HighScores);
         bf.Serialize(file, SaveJSON);
         file.Close();
     }
-
+    public static List<HighScore> GetHighScores()
+    {
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file = null;
+        List<HighScore> HighScores = new List<HighScore>();
+        if (File.Exists(HighScoreSavePath))
+        {
+            file = File.Open(HighScoreSavePath, FileMode.Open);
+            string stringFromFile = (string)bf.Deserialize(file);
+            HighScores = JsonConvert.DeserializeObject<List<HighScore>>(stringFromFile);
+            file.Close();
+        }
+        return HighScores;
+    }
 
    public static bool SaveFileExists()
     {
@@ -102,5 +119,10 @@ public class PersistanceManager  {
         }
 
        return false;
+    }
+
+    public static void EmptyHighScores()
+    {
+        File.Delete(HighScoreSavePath);
     }
 }

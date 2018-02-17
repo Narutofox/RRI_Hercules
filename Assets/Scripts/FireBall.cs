@@ -65,7 +65,9 @@ public class FireBall : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag != Tags.SaveFairy && collision.gameObject.tag != Tags.Player && collision.gameObject.tag != Tags.FireSword && collision.gameObject.tag != Tags.LightningSword)
+        if (collision.gameObject.tag != Tags.SaveFairy && collision.gameObject.tag != Tags.Player 
+            && collision.gameObject.tag != Tags.FireSword && collision.gameObject.tag != Tags.LightningSword 
+            && collision.gameObject.tag != Tags.Potion)
         {
             var Enemy = collision.gameObject.GetComponent(typeof(Enemy));
             if (Enemy != null)

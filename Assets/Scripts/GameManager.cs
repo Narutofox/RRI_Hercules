@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
     public static int ScoreTotal = 0;
     public static string PlayerName;
     private GameObject EnemyHealthSlider;
+    public static bool GameComplete = false;
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -16,6 +17,20 @@ public class GameManager : MonoBehaviour {
         if (EnemyHealthSlider != null)
         {
             EnemyHealthSlider.SetActive(false);
+        }
+        SceneManager.sceneLoaded += SceneManager_sceneLoaded;
+    }
+
+    private void SceneManager_sceneLoaded(Scene arg0, LoadSceneMode arg1)
+    {
+        if (EnemyHealthSlider == null)
+        {
+            EnemyHealthSlider = GameObject.Find("EnemyHealthSlider");
+        }
+
+        if (arg0.name != "S3")
+        {
+            BossLevelEnd();
         }
     }
 
@@ -26,9 +41,11 @@ public class GameManager : MonoBehaviour {
     }
 
     public void LoadLevel(string level)
-    {
+    {          
         SceneManager.LoadScene(level);
         CurrentLevel = level;
+
+        
     }
 
     public void NextLevel(int score)
@@ -63,6 +80,7 @@ public class GameManager : MonoBehaviour {
                     Level = "S3";
                     break;
                 case "S3":
+                    GameComplete = true;
                     PersistanceManager.AddHighScore(PlayerName, ScoreTotal);
                     Level = "MainMenu";
                     break;

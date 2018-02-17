@@ -408,7 +408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 197143042}
   m_Layer: 8
-  m_Name: LeftStandingPoint (1)
+  m_Name: RightStandingPoint (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1550,6 +1550,10 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1361949020199384, guid: 885b919a754508e43a996ebe95c2be7f, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 885b919a754508e43a996ebe95c2be7f, type: 2}
   m_IsPrefabParent: 0
@@ -1668,6 +1672,10 @@ Prefab:
       propertyPath: EnemyHealthSlider
       value: 
       objectReference: {fileID: 609606505}
+    - target: {fileID: 1290841531456886, guid: 1d3cd69c76bbe0b4580c86809161f13f, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1d3cd69c76bbe0b4580c86809161f13f, type: 2}
   m_IsPrefabParent: 0

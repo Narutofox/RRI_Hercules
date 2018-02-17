@@ -14,6 +14,7 @@ namespace Assets.Scripts
         public const string LightningSword = "LightningSword";
         public const string PauseMenu = "PauseMenu";
         public const string HUDCanvas = "HUDCanvas";
-        public const string ExitPortal = "ExitPortal";      
+        public const string ExitPortal = "ExitPortal";
+        public const string Potion = "Potion";
     }
 }

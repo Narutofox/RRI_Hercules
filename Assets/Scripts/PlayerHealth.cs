@@ -67,12 +67,13 @@ public class PlayerHealth : MonoBehaviour {
     private void Death()
     {        
         Anim.SetBool("Alive", false);
-        Player.enabled = false;
+       
         
     }
 
     public void AfterDeathAnimation()
     {
+        Player.enabled = false;
         GameManager.PlayerDead();
     }
     private void OnCollisionEnter2D(Collision2D collision)

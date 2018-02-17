@@ -2773,7 +2773,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &61682534092709442
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -2835,6 +2835,8 @@ MonoBehaviour:
   SetDamage: 40
   NumberOfCoinsToDrop: 5
   Shields: 3
+  MinDistanceToAttack: -2
+  MaxDistanceToAttack: 1.5
 --- !u!210 &210026114482382776
 SortingGroup:
   m_ObjectHideFlags: 1

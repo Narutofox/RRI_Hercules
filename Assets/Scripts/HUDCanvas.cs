@@ -9,7 +9,6 @@ using UnityEngine.UI;
 public class HUDCanvas : MonoBehaviour {
     public Text BodoviVrijednost;
     public Slider HealthSlider;
-
     private int NextLevelHealAmount = 10;
     void Start () {
         if (GameObject.FindGameObjectsWithTag(Tags.HUDCanvas).Length > 1)
@@ -31,6 +30,6 @@ public class HUDCanvas : MonoBehaviour {
             if (HealthSlider.value + NextLevelHealAmount <= HealthSlider.maxValue)
             {
                 HealthSlider.value += NextLevelHealAmount;
-            }               
+            }          
     }
 }

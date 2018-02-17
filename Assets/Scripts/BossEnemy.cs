@@ -245,8 +245,18 @@ public class BossEnemy : MonoBehaviour, IEnemyAttack {
         }
 
         HealthSlider.value -= damage;
+        try
+        {
+            FillImage.color = Color.Lerp(MinHealthColor, MaxHealthColor, HealthSlider.value / HealthSlider.maxValue);
 
-        FillImage.color = Color.Lerp(MinHealthColor, MaxHealthColor, HealthSlider.value / HealthSlider.maxValue);
+        }
+        catch (MissingReferenceException)
+        {
+            FillImage = GameObject.FindGameObjectWithTag("EnemyFillImage").GetComponent<Image>();
+            HealthSlider = GameObject.Find("EnemyHealthSlider").GetComponent<Slider>();
+            FillImage.color = Color.Lerp(MinHealthColor, MaxHealthColor, HealthSlider.value / HealthSlider.maxValue);
+        }
+
         if (HealthSlider.value <= 0)
         {
             Die();

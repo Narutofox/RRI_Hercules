@@ -28,6 +28,7 @@ TagManager:
   - FillImage
   - ExitPortal
   - EnemyFillImage
+  - Potion
   layers:
   - Default
   - TransparentFX
