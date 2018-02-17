@@ -82,7 +82,7 @@ public class PersistanceManager  {
             string stringFromFile = (string)bf.Deserialize(file);
             HighScores = JsonConvert.DeserializeObject<List<HighScore>>(stringFromFile);
             file.Close();
-            File.Delete(HighScoreSavePath);
+            //File.Delete(HighScoreSavePath);
             file = File.Create(HighScoreSavePath);
         }
         else

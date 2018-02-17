@@ -60,7 +60,7 @@ public class MainMenu : MonoBehaviour {
         List<HighScore> HighScores = PersistanceManager.GetHighScores();
         if (HighScores.Count > 0)
         {
-            foreach (var highScore in HighScores.OrderBy(x => x.Points))
+            foreach (var highScore in HighScores.OrderByDescending(x => x.Points))
             {
                 GameObject newText = (GameObject)Instantiate(HighScoreTextObject);
                 newText.transform.SetParent(ScrollContent);
