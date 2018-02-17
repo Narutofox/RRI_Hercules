@@ -14,10 +14,12 @@ public class ArrowScript : MonoBehaviour,IEnemyAttack {
     private bool? ShootDirectionRight = null;
     public int Damage { get; set; }
     public bool IsAttacking { get; set; }
+    public bool CanAttack { get; set; }
     void Start () {
         
         RB2D = GameObject.Find(gameObject.name).GetComponent<Rigidbody2D>();
         IsAttacking = true;
+        CanAttack = true;
     }
     public void Init(GameObject enemy, int damage)
     {

@@ -10,14 +10,16 @@ public class BossEnemy : MonoBehaviour, IEnemyAttack {
 
     public bool IsAttacking { get; set; }
 
+    public bool CanAttack { get; set; }
+
     public GameObject Coin;
     internal bool IsDead;
     public int SetDamage = 50;
     public int NumberOfCoinsToDrop = 2;
     public float MinDistanceToAttack = -2;
     public float MaxDistanceToAttack = 1.5f;
-    private bool CanAttack;
-    private float AttackInterval = 3;
+    //private bool CanAttack;
+    private float AttackInterval = 2;
     private Animator Anim;
     private float RaycastOffset = 0.5f;
     public float RaycastDistance = 10f;
@@ -41,7 +43,8 @@ public class BossEnemy : MonoBehaviour, IEnemyAttack {
     public Color MaxHealthColor = Color.green;
     public Color MinHealthColor = Color.red;
     private GameManager GameManager;
-
+    private int PlayerAttackInterval = 1;
+    private float PlayerAttackTimer = 0;
     // Use this for initialization
     void Start () {
         CanAttack = true;
@@ -80,15 +83,19 @@ public class BossEnemy : MonoBehaviour, IEnemyAttack {
 
         if (CanAttack == false)
         {
-            IsAttacking = false;
             AttackInterval -= Time.deltaTime;
             if (AttackInterval <= 0)
             {
                 CanAttack = true;
-                AttackInterval = 3;
+                AttackInterval = 2;
             }
         }
+        
         CheckForFlip(Player);
+        if (PlayerAttackTimer > 0 )
+        {
+            PlayerAttackTimer -= Time.deltaTime;
+        }
     }
 
     private void FixedUpdate()
@@ -136,7 +143,7 @@ public class BossEnemy : MonoBehaviour, IEnemyAttack {
         {
             ShootLongRange();
         }
-        CanAttack = false;
+        
     }
 
     public void ShootLongRange()
@@ -155,6 +162,7 @@ public class BossEnemy : MonoBehaviour, IEnemyAttack {
         }
 
         InstantiateLongRangeAttack.GetComponent<Rigidbody2D>().AddForce(new Vector2(forceX * 100, 1 * 100));
+        CanAttack = false;
     }
 
     private void CheckForFlip(Transform player)
@@ -190,11 +198,11 @@ public class BossEnemy : MonoBehaviour, IEnemyAttack {
     {
         facingRight = !facingRight;
         SpriteRend.flipX = !SpriteRend.flipX;
-        Vector3 theScale = transform.localScale;
-        // Obrtanje X-osi
-        theScale.x *= -1;
-        // Postavljanje vrijednosti
-        transform.localScale = theScale;
+        //Vector3 theScale = transform.localScale;
+        //// Obrtanje X-osi
+        //theScale.x *= -1;
+        //// Postavljanje vrijednosti
+        //transform.localScale = theScale;
     }
 
     public void Die()
@@ -209,6 +217,11 @@ public class BossEnemy : MonoBehaviour, IEnemyAttack {
             }
             else
             {
+                Coin.GetComponent<Coins>().Value = 10;
+
+
+                Instantiate(Coin, new Vector3(transform.position.x + 1, transform.position.y + 0.6f), Quaternion.identity);
+                
                 Destroy(gameObject);
             }
             Portal.SetActive(true);
@@ -239,24 +252,71 @@ public class BossEnemy : MonoBehaviour, IEnemyAttack {
             Die();
             return;
         }
-        else if (HealthSlider.value < HealthSlider.value / 2 && HealthSlider.value > HealthSlider.value / 3 && SpriteRend.sprite != BossForms[CurrentFormIndex])
+        else if (HealthSlider.value < (Health / 2) && HealthSlider.value > (Health / 3) && CurrentFormIndex != 1)
         {
             CurrentFormIndex++;
             SpriteRend.sprite = BossForms[CurrentFormIndex];
+            Damage += 5;
         }
-        else if (HealthSlider.value < HealthSlider.value / 3 && SpriteRend.sprite != BossForms[CurrentFormIndex])
+        else if (HealthSlider.value < (Health / 3) && CurrentFormIndex != 2)
         {
             CurrentFormIndex++;
             SpriteRend.sprite = BossForms[CurrentFormIndex];
+            Damage += 5;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var PlayerAttack = collision.gameObject.GetComponent(typeof(PlayerAttack));
-        if (PlayerAttack != null && (PlayerAttack as PlayerAttack).IsAttacking())
+        if (PlayerAttack != null && (PlayerAttack as PlayerAttack).IsAttacking() && IsAttacking == false)
         {
             TakeDamage(20,Weapons.Normal);
         }
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (PlayerAttackTimer <= 0)
+        {
+            var PlayerAttack = collision.gameObject.GetComponent(typeof(PlayerAttack));
+            if (PlayerAttack != null && (PlayerAttack as PlayerAttack).IsAttacking())
+            {
+                TakeDamage(20, Weapons.Normal);
+                PlayerAttackTimer = PlayerAttackInterval;
+            }           
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        var PlayerAttack = collision.gameObject.GetComponent(typeof(PlayerAttack));
+        if (PlayerAttack != null && (PlayerAttack as PlayerAttack).IsAttacking() && IsAttacking == false)
+        {
+            PlayerAttackTimer = 0;
+        }
+    }
+
+    //private IEnumerable StartAttack()
+    //{
+    //    float step = maxSpeed * Time.deltaTime;
+    //    bool arrived = false;
+    //    while (!arrived)
+    //    {
+    //        Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y+3), step);
+    //        if (Vector3.Distance(transform.position, new Vector3(transform.position.x, transform.position.y + 3)) == 0) arrived = true;
+    //        yield return null;
+    //    }
+
+
+    //    if (arrived)
+    //    {
+    //        Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y - 3), step);
+    //    }
+    //}
+
+    //private void EndAttack()
+    //{
+
+    //}
 }

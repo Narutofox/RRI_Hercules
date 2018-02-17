@@ -86,9 +86,10 @@ public class PlayerHealth : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var EnemyAttack = collision.gameObject.GetComponent(typeof(IEnemyAttack));
-        if (EnemyAttack != null && (EnemyAttack as IEnemyAttack).IsAttacking)
+        if (EnemyAttack != null && (EnemyAttack as IEnemyAttack).IsAttacking && PlayerAttack.IsAttacking() == false)
         {
             TakeDamage((EnemyAttack as IEnemyAttack).Damage);
+            (EnemyAttack as IEnemyAttack).CanAttack = false;
         }
         if (collision.gameObject.GetComponent(typeof(Potion)) != null)
         {

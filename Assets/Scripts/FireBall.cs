@@ -61,6 +61,23 @@ public class FireBall : MonoBehaviour {
             }
             Anim.SetBool("Hit", true);
         }
-        
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag != Tags.SaveFairy && collision.gameObject.tag != Tags.Player && collision.gameObject.tag != Tags.FireSword && collision.gameObject.tag != Tags.LightningSword)
+        {
+            var Enemy = collision.gameObject.GetComponent(typeof(Enemy));
+            if (Enemy != null)
+            {
+                (Enemy as Enemy).Die();
+            }
+            else if (collision.gameObject.GetComponent(typeof(BossEnemy)))
+            {
+                Enemy = collision.gameObject.GetComponent(typeof(BossEnemy));
+                (Enemy as BossEnemy).TakeDamage(30, Weapons.Fire);
+            }
+            Anim.SetBool("Hit", true);
+        }
+    }  
 }

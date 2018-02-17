@@ -19,6 +19,8 @@ public class Fireball : MonoBehaviour, IEnemyAttack{
 
     public bool IsAttacking { get; set; }
 
+    public bool CanAttack{ get; set; }
+
     void Start()
     {
         Damage = 20;
@@ -33,6 +35,7 @@ public class Fireball : MonoBehaviour, IEnemyAttack{
         ParticleSystem.MainModule Main = fieryParticle.GetComponent<ParticleSystem>().main;
         Main.startColor = new ParticleSystem.MinMaxGradient(FireballColor);
         IsAttacking = true;
+        CanAttack = true;
     }
 
     void Update()
@@ -62,7 +65,7 @@ public class Fireball : MonoBehaviour, IEnemyAttack{
         if (GenerateItemsOnHit)
         {
             int i = UnityEngine.Random.Range(0, PickUps.Length-1);
-            Instantiate(PickUps[i], new Vector3(transform.position.x, transform.position.y + 2), Quaternion.identity);
+            Instantiate(PickUps[i], new Vector3(transform.position.x, transform.position.y), Quaternion.identity);
         }
 
         Destroy(this.gameObject);

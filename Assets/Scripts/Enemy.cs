@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour, IEnemy,IEnemyAttack{
     public GameObject Arrow;
     public GameObject FireBall;
     //private Rigidbody2D RB2D;
-    private bool CanAttack;
+    
     private float AttackInterval = 3;
     private Animator Anim;
     private float RaycastOffset = 0.5f;
@@ -30,6 +30,7 @@ public class Enemy : MonoBehaviour, IEnemy,IEnemyAttack{
     public int NumberOfCoinsToDrop = 2;
     public int Damage { get; set; }
     public bool IsAttacking { get; set; }
+    public bool CanAttack { get; set; }
 
     public int Shields = 0;
     public float MinDistanceToAttack = -2;

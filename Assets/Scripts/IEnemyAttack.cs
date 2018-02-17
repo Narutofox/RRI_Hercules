@@ -5,4 +5,5 @@ using UnityEngine;
 public interface IEnemyAttack  {
     int Damage { get; set; }
     bool IsAttacking { get; set; }
+    bool CanAttack { get; set; }
 }
