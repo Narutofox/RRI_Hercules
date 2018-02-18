@@ -45,6 +45,11 @@ public class BossEnemy : MonoBehaviour, IEnemyAttack {
     private GameManager GameManager;
     private int PlayerAttackInterval = 1;
     private float PlayerAttackTimer = 0;
+    public Transform[] BossMovmentDestinations;
+    public float BossDestinationsChangeInterval = 3;
+    private int CurrentMovmentDestinationIndex = 0;
+    private bool ArrivedAtDestination = false;
+    private bool StartMovingCoroutineDone = false;
     // Use this for initialization
     void Start () {
         CanAttack = true;
@@ -72,6 +77,11 @@ public class BossEnemy : MonoBehaviour, IEnemyAttack {
         Vector2 WidthHeight = RectTrans.sizeDelta;
         WidthHeight.x = Health;
         CheckForFlip(Player);
+
+        if (BossMovmentDestinations.Length > 0)
+        {
+            StartCoroutine(StartMoving(BossMovmentDestinations[CurrentMovmentDestinationIndex].position));
+        }
     }
 	
 	// Update is called once per frame
@@ -95,6 +105,12 @@ public class BossEnemy : MonoBehaviour, IEnemyAttack {
         if (PlayerAttackTimer > 0 )
         {
             PlayerAttackTimer -= Time.deltaTime;
+        }
+
+        if (StartMovingCoroutineDone)
+        {
+            StartMovingCoroutineDone = false;
+            StartCoroutine(StartMoving(BossMovmentDestinations[CurrentMovmentDestinationIndex].position));
         }
     }
 
@@ -307,26 +323,31 @@ public class BossEnemy : MonoBehaviour, IEnemyAttack {
         }
     }
 
-    //private IEnumerable StartAttack()
-    //{
-    //    float step = maxSpeed * Time.deltaTime;
-    //    bool arrived = false;
-    //    while (!arrived)
-    //    {
-    //        Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y+3), step);
-    //        if (Vector3.Distance(transform.position, new Vector3(transform.position.x, transform.position.y + 3)) == 0) arrived = true;
-    //        yield return null;
-    //    }
+    private IEnumerator StartMoving(Vector3 target)
+    {
+        float step = maxSpeed * Time.deltaTime;
+     
+        while (!ArrivedAtDestination)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, target, step);
+            if (Vector3.Distance(transform.position, target) == 0) ArrivedAtDestination = true;
+            yield return null;
+        }
 
 
-    //    if (arrived)
-    //    {
-    //        Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y - 3), step);
-    //    }
-    //}
-
-    //private void EndAttack()
-    //{
-
-    //}
+        if (ArrivedAtDestination)
+        {
+            yield return new WaitForSeconds(BossDestinationsChangeInterval);
+            if (CurrentMovmentDestinationIndex +1 >  BossMovmentDestinations.Length -1)
+            {
+                CurrentMovmentDestinationIndex = 0;
+            }
+            else
+            {
+                CurrentMovmentDestinationIndex++;
+            }
+            ArrivedAtDestination = false;
+            StartMovingCoroutineDone = true;
+        }
+    }
 }

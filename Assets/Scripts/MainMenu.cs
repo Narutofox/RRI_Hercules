@@ -36,10 +36,12 @@ public class MainMenu : MonoBehaviour {
         {
             MsgText.text = "You died. Sry :( Try again.";
             MsgText.enabled = true;
+            MsgText.color = Color.red;
         }
         else if (GameManager.GameComplete)
         {
             MsgText.text = "Congratualtions! Check high scores.";
+            MsgText.color = Color.green;
             MsgText.enabled = true;
         }
         else

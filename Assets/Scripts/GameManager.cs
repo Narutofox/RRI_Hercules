@@ -52,8 +52,8 @@ public class GameManager : MonoBehaviour {
     {          
         SceneManager.LoadScene(level);
         CurrentLevel = level;
+        PlayerDied = false;
 
-        
     }
 
     public void NextLevel(int score)

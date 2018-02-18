@@ -2225,7 +2225,7 @@ GameObject:
   - component: {fileID: 1661024888}
   - component: {fileID: 1661024887}
   m_Layer: 5
-  m_Name: Button
+  m_Name: QuitGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2289,7 +2289,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 666875540}
         m_MethodName: ExitGame
         m_Mode: 1
         m_Arguments:
