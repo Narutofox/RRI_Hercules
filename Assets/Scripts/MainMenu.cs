@@ -14,7 +14,6 @@ public class MainMenu : MonoBehaviour {
     Text MsgText;
     private GameManager GameManager;
     public InputField PlayerName;
-    public PauseMenu Menu;
     public HUDCanvas HUDCanvas;
     public RectTransform ScrollContent;
     public GameObject HighScoreTextObject;
@@ -81,7 +80,6 @@ public class MainMenu : MonoBehaviour {
         {
             PersistanceManager.DeleteSaveFile();
             GameManager.PlayerName = PlayerName.text;
-            Menu.enabled = true;
             GameManager.LoadLevel("S1");
         }
     }
@@ -92,15 +90,6 @@ public class MainMenu : MonoBehaviour {
         PlayerName.text = SaveFile.PlayerName;
         GameManager.PlayerName = SaveFile.PlayerName;
         GameManager.ScoreTotal = SaveFile.TotalPoints;
-        try
-        {
-            Menu.enabled = true;
-        }
-        catch (MissingReferenceException)
-        {
-            Menu = GameObject.FindGameObjectWithTag(Tags.PauseMenu).GetComponent<PauseMenu>();
-            Menu.enabled = true;
-        }
        
         GameManager.LoadLevel(SaveFile.Level);
     }
