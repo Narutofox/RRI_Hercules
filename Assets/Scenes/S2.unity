@@ -2395,12 +2395,22 @@ Prefab:
     - target: {fileID: 224485391367725380, guid: 885b919a754508e43a996ebe95c2be7f,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224485391367725380, guid: 885b919a754508e43a996ebe95c2be7f,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224258145106917766, guid: 885b919a754508e43a996ebe95c2be7f,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224258145106917766, guid: 885b919a754508e43a996ebe95c2be7f,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 885b919a754508e43a996ebe95c2be7f, type: 2}

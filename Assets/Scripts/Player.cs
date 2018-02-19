@@ -79,7 +79,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (isGrounded && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)))
+        if (isGrounded && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)))
         {
             isGrounded = false;
             Anim.SetTrigger("Jump");

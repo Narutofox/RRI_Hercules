@@ -12,14 +12,13 @@ public class PersistanceManager  {
 
     private static string SaveGamePath { get { return Application.persistentDataPath + "/SaveGame.save"; }  }
     private static string HighScoreSavePath { get { return Application.persistentDataPath + "/HighScore.save"; } }
-    private static GameManager GameManager;
     public static void SaveGame()
     {
        Transform PlayerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         PlayerAttack PlayerAttackScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAttack>();
         PlayerHealth PlayerHealthScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         Text BodoviText = GameObject.Find("Bodovi").GetComponent<Text>();
-        GameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        
         SaveGameFile Save = new SaveGameFile
         { x = PlayerTransform.position.x,
             y = PlayerTransform.position.y,

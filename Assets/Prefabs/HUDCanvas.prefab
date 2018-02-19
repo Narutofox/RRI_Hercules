@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 114243924300922482}
   m_Layer: 5
   m_Name: EnemyHealthSlider
-  m_TagString: Untagged
+  m_TagString: EnemyHealthSlider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

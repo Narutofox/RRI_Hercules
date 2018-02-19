@@ -565,12 +565,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!114 &700090345 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114243924300922482, guid: 885b919a754508e43a996ebe95c2be7f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1621099247}
-  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &733469437
 Prefab:
   m_ObjectHideFlags: 0
@@ -1521,7 +1515,8 @@ Prefab:
       propertyPath: m_Name
       value: Coin (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 9838580d844ff3d48a3fb96a85e6816a, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1340030580
@@ -1880,12 +1875,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c8b98691e4340b647bb3332eefbca7a8, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1597920981 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114947354892130566, guid: 885b919a754508e43a996ebe95c2be7f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1621099247}
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1621099247
 Prefab:
   m_ObjectHideFlags: 0
@@ -1986,22 +1975,22 @@ Prefab:
     - target: {fileID: 224485391367725380, guid: 885b919a754508e43a996ebe95c2be7f,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224485391367725380, guid: 885b919a754508e43a996ebe95c2be7f,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224258145106917766, guid: 885b919a754508e43a996ebe95c2be7f,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224258145106917766, guid: 885b919a754508e43a996ebe95c2be7f,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 885b919a754508e43a996ebe95c2be7f, type: 2}
@@ -2505,16 +2494,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 114561004985496658, guid: 31197d59eeee8d44ab26823f047962f5,
-        type: 2}
-      propertyPath: HealthSlider
-      value: 
-      objectReference: {fileID: 700090345}
-    - target: {fileID: 114561004985496658, guid: 31197d59eeee8d44ab26823f047962f5,
-        type: 2}
-      propertyPath: FillImage
-      value: 
-      objectReference: {fileID: 1597920981}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31197d59eeee8d44ab26823f047962f5, type: 2}
   m_IsPrefabParent: 0

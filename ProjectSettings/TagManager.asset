@@ -30,6 +30,7 @@ TagManager:
   - EnemyFillImage
   - Potion
   - GameManager
+  - EnemyHealthSlider
   layers:
   - Default
   - TransparentFX

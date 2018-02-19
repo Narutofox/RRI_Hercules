@@ -50,6 +50,7 @@ public class BossEnemy : MonoBehaviour, IEnemyAttack {
     private int CurrentMovmentDestinationIndex = 0;
     private bool ArrivedAtDestination = false;
     private bool StartMovingCoroutineDone = false;
+    
     // Use this for initialization
     void Start () {
         CanAttack = true;
@@ -68,20 +69,32 @@ public class BossEnemy : MonoBehaviour, IEnemyAttack {
         GameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         GameManager.BossLevelStart();
 
-        HealthSlider = GameObject.Find("EnemyHealthSlider").GetComponent<Slider>();
-        FillImage = GameObject.FindGameObjectWithTag("EnemyFillImage").GetComponent<Image>();
-        HealthSlider.maxValue = Health;
-        HealthSlider.minValue = 0;
-        HealthSlider.value = Health;
-        RectTransform RectTrans = HealthSlider.GetComponent<RectTransform>();
-        Vector2 WidthHeight = RectTrans.sizeDelta;
-        WidthHeight.x = Health;
+        GetAndSetUIObjects();
+
         CheckForFlip(Player);
 
         if (BossMovmentDestinations.Length > 0)
         {
             StartCoroutine(StartMoving(BossMovmentDestinations[CurrentMovmentDestinationIndex].position));
         }
+    }
+
+    private void GetAndSetUIObjects()
+    {
+        if (HealthSlider == null && GameObject.FindGameObjectsWithTag("EnemyHealthSlider").Length == 1)
+        {
+            HealthSlider = GameObject.FindGameObjectWithTag("EnemyHealthSlider").GetComponent<Slider>();
+            HealthSlider.maxValue = Health;
+            HealthSlider.minValue = 0;
+            HealthSlider.value = Health;
+            RectTransform RectTrans = HealthSlider.GetComponent<RectTransform>();
+            Vector2 WidthHeight = RectTrans.sizeDelta;
+            WidthHeight.x = Health;
+        }
+        if (FillImage == null && GameObject.FindGameObjectsWithTag("EnemyFillImage").Length == 1)
+        {
+            FillImage = GameObject.FindGameObjectWithTag("EnemyFillImage").GetComponent<Image>();
+        }       
     }
 	
 	// Update is called once per frame
@@ -112,6 +125,7 @@ public class BossEnemy : MonoBehaviour, IEnemyAttack {
             StartMovingCoroutineDone = false;
             StartCoroutine(StartMoving(BossMovmentDestinations[CurrentMovmentDestinationIndex].position));
         }
+        GetAndSetUIObjects();
     }
 
     private void FixedUpdate()

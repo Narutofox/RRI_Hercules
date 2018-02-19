@@ -1695,6 +1695,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1502751522416362, guid: 885b919a754508e43a996ebe95c2be7f, type: 2}
+      propertyPath: m_TagString
+      value: EnemyHealthSlider
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 885b919a754508e43a996ebe95c2be7f, type: 2}
   m_IsPrefabParent: 0
