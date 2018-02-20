@@ -8,7 +8,7 @@ public class Lightning : MonoBehaviour {
     public float NumberOfSecondsLasting;
     public float NumberOfSecondsRemaining;
     private PlayerAttack PlayerAttackScript;
-    private float TriggerTimer = 2;
+    private float TriggerTimer = 1;
     private bool TrigerStay = false;
     // Use this for initialization
     void Start () {
@@ -68,7 +68,7 @@ public class Lightning : MonoBehaviour {
                 Enemy = collision.gameObject.GetComponent(typeof(BossEnemy));
                 (Enemy as BossEnemy).TakeDamage(30, Weapons.Lightning);
             }
-            TriggerTimer = 2;
+            TriggerTimer = 1;
         }
 
     }
